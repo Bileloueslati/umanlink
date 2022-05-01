@@ -1,1 +1,9 @@
-Copyright {{"now"|date('Y')}}
+<footer id="footer"></footer>
+
+{% for item in assets.js %}
+
+<script src="{{ site.theme.link }}/public{{item}}"></script>
+{% endfor %}
+
+
+{{ function('wp_footer') }}

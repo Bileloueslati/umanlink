@@ -4,8 +4,7 @@
  * Template Name: HomePage
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Umanlink
  */
 
 use Timber\Post;

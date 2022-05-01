@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.theme_container {
+  @apply container px-14;
+}
+
+#primary-nav {
+  ul {
+    @apply list-none flex;
+    li {
+      @apply mr-10;
+
+      a {
+        @apply hover:text-primary text-white transition-colors text-lg;
+
+        &.current-menu-item {
+          @apply text-primary;
+        }
+      }
+    }
+  }
+}
