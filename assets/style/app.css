@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.theme_container {
+
+    @apply container px-14;
+}

@@ -2,7 +2,7 @@
     "name": "dev/umanlink",
     "autoload": {
         "psr-4": {
-            "Dev\\Umanlink\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
