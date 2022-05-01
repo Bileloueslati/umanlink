@@ -1,0 +1,7 @@
+vendor
+wp-content
+node-modules
+tests
+bin
+composer.lock.
+node_modules

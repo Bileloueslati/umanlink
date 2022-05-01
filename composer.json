@@ -1,0 +1,25 @@
+{
+    "name": "dev/umanlink",
+    "autoload": {
+        "psr-4": {
+            "Dev\\Umanlink\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bilel",
+            "email": "im@bilel.dev"
+        }
+    ],
+    "require": {
+        "timber/timber": "^1.19"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.4"
+    }
+}
