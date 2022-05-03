@@ -1,0 +1,45 @@
+{% set ceo_word = post.meta('ceo_word') %}
+
+<section id="ceo_word" class="bg-primary text-white my-[150px] py-20 px-20">
+
+<div class="container mx-auto">
+
+<div class="grid lg:grid-cols-8 gap-10">
+
+<div class="lg:col-span-3 relative">
+
+<img src="{{ ceo_word.image }}" alt="{{ ceo_word.fullname }}" class="max-h-96 block mx-auto absolute top-[-110px] left-0 right-0" />
+ 
+</div>
+
+<div class="lg:col-span-5">
+
+<blockquote class="mb-6 relative before:content-['“'] before:leading-3 before:absolute before:top-[0] before:text-[120px] before:font-serif before:left-[0] before:text-gray-300">
+
+<p class="text-[20px] font-futuraOblique italic pt-6">{{ ceo_word.description}} </p>
+
+</blockquote>
+
+<ul class="list-none">
+
+<li>
+
+<h4 class="font-bold font-gotham mb-2 text-lg">{{ ceo_word.fullname }}</h4>
+
+</li>
+
+<li>{{ ceo_word.position }}</li>
+
+
+</ul>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>

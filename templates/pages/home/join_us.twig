@@ -1,0 +1,40 @@
+{% set join_us = post.meta('join_us') %}
+
+<section id="join_us" class="mb-36">
+
+	<div class="container mx-auto lg:px-52">
+
+		<div class="grid lg:grid-cols-8 items-center gap-x-10">
+
+			<div class="lg:col-span-3">
+
+				<h3 class="text-4xl font-bold mb-4">
+
+					{% set words = join_us.title | split(" ") %}
+
+					<span class="block">{{ words[0] }}</span>
+
+					{% for word in words | slice(1) %}
+
+						<span class="text-teal-400">{{ word }}
+						</span>
+
+					{% endfor %}
+
+				</h3>
+
+				<p class="text-lg">{{ join_us.description }}</p>
+
+			</div>
+
+			<div class="lg:col-span-5">
+
+					{% include "components/entities_circle.twig" with { 'entities': entities} %}
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div></div></section>

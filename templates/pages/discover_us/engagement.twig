@@ -1,0 +1,49 @@
+{% set group = post.meta('engagement') %}
+
+<section class="my-16 relative">
+
+<img src="{{ group.image }}" class="max-h-[400px] lg:absolute left-0 top-[50%] translate-y-[-50%]" alt="{{ group.title }}" />
+
+<div class="container">
+
+<div class="grid grid-cols-2 gap-x-20 items-center">
+
+<div></div>
+
+<div>
+
+<span class="small_title">{{ group.small_title }}</span>
+
+<h2 class="text-3xl mb-4">{{ group.title }}</h2>
+
+<p>{{ group.description }}</p>
+
+<div class="accordion">
+
+{% for faq in group.faqs %}
+
+  <div class="item">
+
+  <div class="header">
+  
+  <h4>{{ faq.title }}</h4>
+
+  <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+  </div>
+
+    <div class="body">{{ faq.content }} </div>
+
+  </div>
+
+  {% endfor %}
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>

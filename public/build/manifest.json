@@ -1,5 +1,21 @@
 {
-  "build/app.css": "/build/app.css",
-  "build/app.js": "/build/app.js",
-  "build/runtime.js": "/build/runtime.js"
+  "wp-content/themes/umanlink/public/build/app.css": "/wp-content/themes/umanlink/public/build/app.css",
+  "wp-content/themes/umanlink/public/build/app.js": "/wp-content/themes/umanlink/public/build/app.js",
+  "wp-content/themes/umanlink/public/build/runtime.js": "/wp-content/themes/umanlink/public/build/runtime.js",
+  "wp-content/themes/umanlink/public/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_num-55de08.css": "/wp-content/themes/umanlink/public/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_num-55de08.css",
+  "wp-content/themes/umanlink/public/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_num-55de08.js": "/wp-content/themes/umanlink/public/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_num-55de08.js",
+  "wp-content/themes/umanlink/public/build/images/fontawesome-webfont.svg?v=4.7.0": "/wp-content/themes/umanlink/public/build/images/fontawesome-webfont.c1e38fd9.svg",
+  "wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.eot?v=4.7.0": "/wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.8b43027f.eot",
+  "wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.ttf?v=4.7.0": "/wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.1e59d233.ttf",
+  "wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.woff?v=4.7.0": "/wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.f691f37e.woff",
+  "wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.woff2?v=4.7.0": "/wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.20fd1704.woff2",
+  "wp-content/themes/umanlink/public/build/fonts/GothamBook.ttf": "/wp-content/themes/umanlink/public/build/fonts/GothamBook.58fb9151.ttf",
+  "wp-content/themes/umanlink/public/build/fonts/GothamMedium.ttf": "/wp-content/themes/umanlink/public/build/fonts/GothamMedium.0a910c0b.ttf",
+  "wp-content/themes/umanlink/public/build/fonts/GothamBold.ttf": "/wp-content/themes/umanlink/public/build/fonts/GothamBold.108854bb.ttf",
+  "wp-content/themes/umanlink/public/build/fonts/GothamBookItalic.ttf": "/wp-content/themes/umanlink/public/build/fonts/GothamBookItalic.3de1b843.ttf",
+  "wp-content/themes/umanlink/public/build/fonts/Gotham-Light.otf": "/wp-content/themes/umanlink/public/build/fonts/Gotham-Light.59aa4004.otf",
+  "wp-content/themes/umanlink/public/build/fonts/FuturaStd-BookOblique.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-BookOblique.4c128925.otf",
+  "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Light.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Light.6072c282.otf",
+  "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Book.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Book.16b60add.otf",
+  "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Medium.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Medium.eae453c7.otf"
 }

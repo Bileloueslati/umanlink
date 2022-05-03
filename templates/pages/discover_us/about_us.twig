@@ -1,0 +1,23 @@
+
+{% set group = post.meta('about_us') %}
+
+<section class="py-16 relative">
+
+<img src="{{ group.image }}" class="max-h-[400px] lg:absolute right-0 top-0 bottom-0" alt="{{ group.title }}" />
+
+<div class="container mx-auto">
+
+<div class="grid grid-cols-2 gap-x-16">
+
+<div>
+
+<span class="small_title">{{ group.small_title }}</span>
+
+<h2 class="text-3xl mb-4">{{ group.title }} </h2>
+
+<div>{{ group.description }} </div>
+
+</div>
+
+</div>
+</section>

@@ -1,0 +1,40 @@
+#brands {
+  .item {
+    @apply relative;
+
+    &:hover {
+      .content {
+        @apply translate-y-[-20px];
+
+        .btn {
+          @apply opacity-100;
+        }
+      }
+
+      .overlay {
+        background: linear-gradient(
+          0deg,
+          rgb(44 51 69) 1%,
+          rgba(0, 0, 0, 0) 80%
+        );
+      }
+    }
+
+    .content {
+      @apply relative z-10 transition-transform duration-200;
+
+      .btn {
+        @apply opacity-0 transition-opacity duration-300 font-gotham bg-white text-primary hover:bg-primary hover:text-white px-5 py-2 rounded-full font-medium text-[14px] inline-flex;
+      }
+    }
+
+    .overlay {
+      @apply absolute top-0 right-0 h-full w-full;
+      background: linear-gradient(0deg, rgb(6, 25, 67) 1%, rgb(0 0 0 / 0%) 80%);
+    }
+  }
+}
+
+#become_Umanien {
+  @extend #brands;
+}

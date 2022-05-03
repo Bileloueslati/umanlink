@@ -1,15 +1,15 @@
 
 {% set hero = post.meta('hero_banner') %}
 
-<section class="h-screen w-full bg-cover text-white bg-center flex bg-secondary">
+<section class="h-screen w-full bg-cover text-white bg-center flex" style="background-image: url({{hero.image}})">
 
-<div class="pt-10 flex flex-col justify-center items-center text-center w-8/12 mx-auto h-full">
+<div class="pt-10 flex flex-col justify-center items-center text-center w-6/12 mx-auto h-full">
 
-<h1 class="text-5xl mb-6">{{ hero.title }}</h1>
+<h1 class="text-6xl mb-6 font-gotham font-bold">{{ hero.title }}</h1>
 
-<p class="mb-6 text-lg">{{ hero.description }}</p>
+<p class="mb-6 text-xl">{{ hero.description }}</p>
 
-<a class="bg-primary rounded-full py-2 px-10 text-white hover:opacity-80 text-lg" href="/">Explorer</a>
+<a class="bg-primary rounded-full py-2 px-10 text-white hover:opacity-80 text-lg font-gotham font-medium" id="btn" href="/">Explorer</a>
 
 </div>
 

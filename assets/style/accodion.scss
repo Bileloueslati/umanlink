@@ -1,0 +1,32 @@
+.accordion {
+  .item {
+    @apply mb-1;
+    .header {
+      @apply flex justify-between border-b border-neutral-300 border-solid py-4;
+    }
+
+    .body {
+      @apply max-h-[0] py-2 overflow-hidden transition-all ease-in-out duration-500;
+    }
+
+    h4 {
+      @apply font-futura font-normal uppercase text-lg cursor-pointer;
+    }
+
+    h4,
+    .fa {
+      @apply text-secondary;
+    }
+
+    &.active {
+      .body {
+        @apply max-h-[500px];
+      }
+
+      h4,
+      .fa {
+        @apply text-primary;
+      }
+    }
+  }
+}

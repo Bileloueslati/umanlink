@@ -1,0 +1,24 @@
+
+{% set group = post.meta('entities') %}
+
+<section class="mt-10">
+
+<div class="container">
+
+<div class="grid grid-cols-2 gap-x-20 items-center">
+
+<div>
+
+<span class="small_title">{{ group.small_title }}</span>
+
+<h2 class="text-3xl mb-4">{{ group.title }}</h2>
+
+<p> {{ group.description }}</p>
+
+</div>
+
+<div>{% include "components/entities_circle.twig" with { 'entities': entities} %}</div>
+
+</div>
+
+</div>

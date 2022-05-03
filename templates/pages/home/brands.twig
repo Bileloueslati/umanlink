@@ -1,0 +1,92 @@
+
+{% set brands = post.meta('brands') %}
+
+<section id="brands" class="brands my-20">
+
+<div class="container mx-auto">
+
+<div class="grid grid-cols-8 items-center">
+
+<div class="col-span-6">
+
+<span class="small_title">{{ brands.small_title}}</span>
+
+<h2 class="text-3xl text-secondary font-bold my-2">{{ brands.title}}</h2>
+
+<p class="text-secondary font-normal">{{ brands.description }}</p>
+
+</div>
+
+<div class="col-span-2">
+
+<div class="flex justify-end">
+
+<button class="swiper-next-button bg-primary text-white h-10 w-10 rounded-full flex items-center justify-center mr-6"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
+
+<button class="swiper-prev-button bg-primary text-white h-10 w-10 rounded-full flex items-center justify-center"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="slider swiper mt-14" data-xs="1.5" data-md="2.5" data-lg="3.5">
+
+<div class="swiper-wrapper">
+
+{% for item in brands.sliders %}
+
+<div class="item swiper-slide bg-cover bg-center h-[400px] rounded-xl flex flex-col justify-end px-4 pt-6" style="background-image: url({{ item.image }})">
+
+<div class="overlay z-0"></div>
+
+<div class="content">
+
+<div class="mb-2"><img src="{{ item.logo }}" alt="{{ item.title }}" /></div>
+
+<h3 class="text-lg font-medium text-white mb-2">{{ item.title }}</h3>
+
+<a class="btn" href="/">Explore more</a> 
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+
+</div> <!-- /container -->
+
+<div class="grid grid-cols-8 mt-20 gap-6 px-2">
+ 
+{% for logo in brands.logos %}
+
+<div class="border p-2 flex items-center rounded-lg transition-transform hover:scale-110">
+
+<img src="{{ logo }}" class="mx-auto" alt="" />
+
+</div>
+
+
+{% endfor %}
+
+{% for logo in brands.logos %}
+
+<div class="border p-2 flex items-center rounded-lg transition-transform hover:scale-110">
+
+<img src="{{ logo }}" class="mx-auto" alt="" />
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+</section>

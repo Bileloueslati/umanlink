@@ -76,7 +76,8 @@ class StarterSite extends Site
 		add_filter('timber/twig', array($this, 'add_to_twig'));
 		add_action('init', array($this, 'register_post_types'));
 		add_action('init', array($this, 'register_taxonomies'));
-		add_action( 'wp_enqueue_scripts', [Actions::class, "remove_wp_block_library_css"], 100 );
+		add_action('wp_enqueue_scripts', [Actions::class, "remove_wp_block_library_css"], 100);
+		$this->registerOptionPage();
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
@@ -116,6 +117,8 @@ class StarterSite extends Site
 		$context["assets"] = $this->getAssets();
 		$context['menu']  = new Menu();
 		$context['site']  = $this;
+		$context["footer"] = get_field("footer", "option");
+		$context["site"]->logo  = wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full');
 		// dd($context);
 		return $context;
 	}
@@ -173,16 +176,8 @@ class StarterSite extends Site
 		);
 
 		add_theme_support('menus');
-	}
 
-	/** This Would return 'foo bar!'.
-	 *
-	 * @param string $text being 'foo', then returned 'foo bar!'.
-	 */
-	public function myfoo($text)
-	{
-		$text .= ' bar!';
-		return $text;
+		add_theme_support('custom-logo');
 	}
 
 	/** This is where you can add your own functions to twig.
@@ -194,6 +189,33 @@ class StarterSite extends Site
 		$twig->addExtension(new StringLoaderExtension());
 		$twig->addFilter(new TwigFilter('myfoo', array($this, 'myfoo')));
 		return $twig;
+	}
+
+	public function registerOptionPage()
+	{
+
+		if (function_exists('acf_add_options_page')) {
+
+			acf_add_options_page(array(
+				'page_title' 	=> 'Theme General Settings',
+				'menu_title'	=> 'Theme Settings',
+				'menu_slug' 	=> 'theme-general-settings',
+				'capability'	=> 'edit_posts',
+				'redirect'		=> false
+			));
+
+			acf_add_options_sub_page(array(
+				'page_title' 	=> 'Theme Header Settings',
+				'menu_title'	=> 'Header',
+				'parent_slug'	=> 'theme-general-settings',
+			));
+
+			acf_add_options_sub_page(array(
+				'page_title' 	=> 'Theme Footer Settings',
+				'menu_title'	=> 'Footer',
+				'parent_slug'	=> 'theme-general-settings',
+			));
+		}
 	}
 }
 

@@ -1,2 +1,10 @@
 import "./style/app.scss";
-import { sayHello } from "./js/nav";
+
+require("./js/swiper");
+
+require("./js/navbar");
+
+require("./js/accordion");
+
+
+

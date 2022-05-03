@@ -1,0 +1,27 @@
+<div class="entities_circles py-16">
+
+<div class="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+
+<img src="{{ site.logo }}" alt="{{ site.name }}"/>
+
+</div>
+
+<div class="z-30 h-[450px] w-[450px] rounded-full border-2 border-dashed relative mx-auto block circle">
+
+{% for entity in entities %}
+
+<div class="item z-40">
+
+<a href="{{ entity.link }}">
+
+<img src="{{ entity.meta("logo") }}" alt="{{ entity.title }}" />
+
+</a>
+
+</div>
+
+ {% endfor %}
+
+ </div>
+
+  </div>

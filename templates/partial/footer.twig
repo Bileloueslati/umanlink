@@ -1,8 +1,140 @@
-<footer id="footer"></footer>
+
+
+<div class="h-[8px] w-full bg-teal-400"></div>
+
+<div class="h-[8px] w-full bg-primary"></div>
+
+<footer id="footer" class="bg-secondary text-white pt-20 text-md relative overflow-hidden font-futura font-normal">
+
+<div class="absolute bottom-0 right-0 rotate-[-35deg] flex items-end">
+
+<div class="h-[110px] w-[50px] rounded-t-full border-4 border-teal-400 border-b-0"></div>
+
+<div class="h-[200px] w-[50px] rounded-t-full border-4 border-primary border-b-0 relative right-[-20px]"></div>
+
+</div>
+
+
+<div class="container mx-auto">
+
+<div class="grid grid-cols-12 gap-x-10">
+
+<div class="col-span-12 lg:col-span-4 lg:pr-12 mb-10 lg:mb-0">
+
+<a href="{{ site.url }}">
+
+<img src="{{ footer.first_col.logo }}" alt="{{ site.name }}" class="mb-6" />
+
+</a>
+
+<p class="leading-6">{{ footer.first_col.description }}</p>
+
+<span class="block font-gotham font-medium mb-3 mt-6">Follow Us</span>
+
+<ul class="list-none flex">
+
+{% for item in footer.infos.social_medias %}
+
+<li class="mr-4">
+
+<a target="_blank" href="{{ item.link }}" class="flex justify-center items-center h-[30px] w-[30px] rounded-full bg-white text-secondary hover:bg-primary hover:text-white transition-all duration-300">
+
+<i class="fa fa-{{ item.type }}" aria-hidden="true"></i>
+
+</a>
+
+</li>
+
+{% endfor %}
+
+
+</ul>
+</div>
+
+{% for nav_block in footer.navs %}
+
+<div class="col-span-6 lg:col-span-2 lg:mt-6">
+ 
+<ul class="list-none">
+
+{% for item in nav_block.nav %}
+
+<li class="mb-3">
+
+<a href="{{ item.link }}" class="hover:text-primary hover:pl-2 transition-all duration-300">{{ item.title }}</a>
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+{% endfor %}
+
+<div class="col-span-12 lg:col-span-4 mt-10 lg:mt-6">
+
+<ul class="list-none font-gotham">
+
+<li class="mb-4">
+
+<i class="fa fa-phone mr-2 text-teal-400" aria-hidden="true"></i>
+
+<span class="font-medium">{{ footer.infos.phone_number }}</span>
+
+</li>
+
+<li class="mb-4">
+
+<i class="fa fa-envelope-open-o mr-2 text-teal-400" aria-hidden="true"></i>
+
+<span class="font-medium">{{ footer.infos.email }}</span>
+
+</li>
+
+<li>
+
+<i class="fa fa-map-marker mr-2 text-teal-400" aria-hidden="true"></i>
+
+<span class="font-medium">{{ footer.infos.address }}</span>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="flex justify-between mt-20 pb-6 pt-3 border-t border-slate-400 text-sm">
+
+<div>© {{ "now" | date("Y")}} {{ footer.signature.text }}</div>
+
+<ul class="hidden lg:flex">
+
+{% for item in footer.signature.links %}
+
+<li class="{{ not loop.last ? "mr-6" : "" }}">
+
+<a href="{{ item.link }}" class="hover:text-primary transition-all">{{ item.title }}</a>
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+
+</div> <!-- CONTAINER -->
+</footer>
 
 {% for item in assets.js %}
 
-<script src="{{ site.theme.link }}/public{{item}}"></script>
+<script src="{{item}}"></script>
+
 {% endfor %}
 
 

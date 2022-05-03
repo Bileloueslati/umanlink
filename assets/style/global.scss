@@ -1,0 +1,92 @@
+@import "./fonts/gotham/gotham.css";
+@import "./fonts/futura/futura.css";
+@import "./home.scss";
+@import "./accodion.scss";
+
+body {
+  @apply font-futura;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-gotham font-bold;
+}
+
+p {
+
+  @apply mb-6;
+}
+
+.small_title {
+
+   @apply font-medium text-primary after:relative mb-3 block text-lg;
+
+   &:after {
+
+        @apply w-[50px] h-[3px] bg-primary inline-block rounded-lg ml-2 top-[-3px];  
+   }
+}
+
+/** NAV */
+
+#primary-nav {
+  ul {
+    @apply list-none flex;
+    li {
+      @apply mr-10;
+
+      &.current-menu-item {
+        a {
+          @apply text-primary;
+        }
+      }
+
+      a {
+        @apply hover:text-primary text-secondary transition-colors text-lg font-medium;
+      }
+    }
+  }
+}
+
+
+/** ENTITIES CIRCLE */
+
+.entities_circles {
+  @apply relative;
+  .item {
+    @apply absolute flex items-center justify-center border-2 border-dashed rounded-full h-[150px] w-[150px] bg-white transition-transform hover:scale-110;
+
+    img {
+      @apply max-h-[60px] max-w-[110px] w-auto object-cover;
+    }
+
+    &:nth-child(1) {
+      top: -50px;
+      right: 150px;
+    }
+
+    &:nth-child(2) {
+      top: 100px;
+      right: -50px;
+    }
+
+    &:nth-child(3) {
+      top: 300px;
+      right: -50px;
+    }
+
+    &:nth-child(4) {
+      top: 350px;
+      right: 220px;
+    }
+
+    &:nth-child(5) {
+      top: 100px;
+      left: -50px;
+    }
+  }
+}

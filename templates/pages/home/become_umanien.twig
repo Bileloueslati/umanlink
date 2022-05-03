@@ -1,0 +1,37 @@
+{% set become_umanien = post.meta('become_umanien') %}
+
+<section id="become_Umanien" class="mb-20">
+
+	<div class="container mx-auto">
+
+		<span class="small_title !mb-6">{{ become_umanien.title}}</span>
+
+		<div class="grid grid-cols-2 gap-20">
+
+			{% for item in become_umanien.blocks %}
+
+				<div class="item rounded-xl flex flex-col justify-end bg-cover bg-center h-[300px] w-full" style="background-image: url({{ item.image }})">
+
+					<div class="overlay"></div>
+
+					<div class="content px-8 pb-4">
+
+						<h3 class="text-2xl text-teal-400 font-medium">{{ item.title }}</h3>
+
+						<p class="text-white mb-2">{{ item.description }}</p>
+
+                        <a class="btn" href="{{ item.button_link }}">{{ item.button_title }}</a>
+
+					</div>
+
+				</div>
+
+
+			{% endfor %}
+
+		</div>
+
+	</div>
+
+
+</section>
