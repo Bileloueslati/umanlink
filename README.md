@@ -1,6 +1,6 @@
-## Wordpress website based on Timber
-- PHP 7.4.19
-- Wordpress 5.9 & Timber
+## Stack
+- PHP 7.4.19 & MySQL
+- Wordpress 5.9 & Timber & ACF
 - Tailwind CSS
-- Vanilla JS
+- Vanilla JS & Typescript
 - Webpack encore
