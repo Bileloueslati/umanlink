@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{% for item in blocks %}
+
+{% include "pages/entity/" ~ item ~ ".twig" %}
+
+{% endfor %}
+
+
+{% endblock %}

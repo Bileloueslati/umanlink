@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#007afb",
-        secondary: "#061943",
+        secondary: "#032158",
       },
       fontFamily: {
         gotham: "Gotham, Arial, sans-serif",

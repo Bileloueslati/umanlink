@@ -6,7 +6,7 @@
 
 <footer id="footer" class="bg-secondary text-white pt-20 text-md relative overflow-hidden font-futura font-normal">
 
-<div class="absolute bottom-0 right-0 rotate-[-35deg] flex items-end">
+<div class="absolute z-10 bottom-0 right-0 rotate-[-35deg] flex items-end">
 
 <div class="h-[110px] w-[50px] rounded-t-full border-4 border-teal-400 border-b-0"></div>
 
@@ -15,7 +15,7 @@
 </div>
 
 
-<div class="container mx-auto">
+<div class="container mx-auto relative z-50">
 
 <div class="grid grid-cols-12 gap-x-10">
 
@@ -130,12 +130,6 @@
 
 </div> <!-- CONTAINER -->
 </footer>
-
-{% for item in assets.js %}
-
-<script src="{{item}}"></script>
-
-{% endfor %}
 
 
 {{ function('wp_footer') }}

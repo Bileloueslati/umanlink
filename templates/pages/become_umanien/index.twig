@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{% for item in blocks %}
+
+{% include "pages/become_umanien/" ~ item ~ ".twig" %}
+
+{% endfor %}
+
+{% endblock %}

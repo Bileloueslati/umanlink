@@ -1,0 +1,46 @@
+<section class="banner-title flex flex-col mb-20 lg:mb-32 !p-0">
+
+<div class="container mx-auto relative flex flex-col h-[400px]">
+
+<div class="lg:max-w-5xl flex flex-col h-full justify-center relative">
+
+<div class="pb-10">
+
+<ul class="list-none flex mb-3">
+
+<li class="mr-2">
+<a href="{{ site.url }}">{{ site.name }}</a>
+<span class="pl-2"><i class="fa fa-chevron-right text-sm" aria-hidden="true"></i></span>
+</li>
+
+<li class="mr-2">
+
+<a href="/nos-entites/" class="text-white">Nos entités</a>
+
+<span class="pl-2"><i class="fa fa-chevron-right text-sm" aria-hidden="true"></i></span>
+
+</li>
+
+<li><a href="{{ post.link }}" class="text-primary">{{ post.title }}</a></li>
+
+</ul>
+
+<h1>{{ post.meta("page_title") }}</h1>
+
+</div>
+
+<div class="absolute bottom-[-20px] left-0 z-40">
+
+<div class="rounded-lg bg-white py-6 px-8 table shadow-md">
+
+<img src="{{ post.meta("logo") }}" alt="{{ post.title }}" />
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>

@@ -16,6 +16,8 @@ use Timber\Timber;
 use Timber\Twig;
 use Twig\Extension\StringLoaderExtension;
 use Twig\TwigFilter;
+use Twig\Environment as TwigEnv;
+use Whoops\Handler\PrettyPageHandler;
 
 /**
  * If you are installing Timber as a Composer dependency in your theme, you'll need this block
@@ -77,9 +79,22 @@ class StarterSite extends Site
 		add_action('init', array($this, 'register_post_types'));
 		add_action('init', array($this, 'register_taxonomies'));
 		add_action('wp_enqueue_scripts', [Actions::class, "remove_wp_block_library_css"], 100);
+		Actions::remove_default_links();
 		$this->registerOptionPage();
+		$this->debug();
 		parent::__construct();
 	}
+
+
+	public function debug()
+	{
+		if (WP_DEBUG === true) {
+			$whoops = new \Whoops\Run();
+			$whoops->pushHandler(new PrettyPageHandler);
+			$whoops->register();
+		}
+	}
+
 	/** This is where you can register custom post types. */
 	public function register_post_types()
 	{
@@ -184,10 +199,11 @@ class StarterSite extends Site
 	 *
 	 * @param string $twig get extension.
 	 */
-	public function add_to_twig($twig)
+	public function add_to_twig(TwigEnv $twig)
 	{
-		$twig->addExtension(new StringLoaderExtension());
-		$twig->addFilter(new TwigFilter('myfoo', array($this, 'myfoo')));
+
+		 $twig->addExtension(new StringLoaderExtension());
+		// $twig->addFilter(new TwigFilter('myfoo', array($this, 'myfoo')));
 		return $twig;
 	}
 

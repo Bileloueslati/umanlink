@@ -1,0 +1,27 @@
+{% set group = post.meta('success') %}
+
+<section id="success" class="bg-secondary text-white py-12 relative">
+
+<img src="{{ group.image }}" class="lg:block hidden max-h-[400px] lg:absolute right-0 top-0 bottom-0 h-full pointer-events-none" alt="" />
+
+<div class="container">
+
+<div class="grid lg:grid-cols-2 lg:w-2/3">
+
+{% for item in group.blocks %}
+
+<div class="flex flex-col mb-4 px-8">
+
+<h4 class="text-4xl text-teal-400 font-bold mb-4">{{ item.number }}</h4>
+
+<p class="lg:text-lg mb-0">{{ item.description }}</p>
+
+</div>
+
+{% endfor %}
+
+
+</div>
+</div>
+
+</section>

@@ -6,7 +6,7 @@
 
 </div>
 
-<div class="z-30 h-[450px] w-[450px] rounded-full border-2 border-dashed relative mx-auto block circle">
+<div class="z-30 h-[300px] lg:h-[450px] w-full lg:w-[450px] rounded-full border-2 border-dashed relative mx-auto block circle">
 
 {% for entity in entities %}
 
@@ -14,7 +14,11 @@
 
 <a href="{{ entity.link }}">
 
+<div class="h-full w-full">
+
 <img src="{{ entity.meta("logo") }}" alt="{{ entity.title }}" />
+
+</div>
 
 </a>
 

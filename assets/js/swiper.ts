@@ -1,6 +1,6 @@
 import Swiper, { Navigation } from "swiper";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("turbo:load", () => {
   document.querySelectorAll<HTMLInputElement>(".swiper").forEach((el) => {
 
     const { xs, lg, md } = el.dataset;

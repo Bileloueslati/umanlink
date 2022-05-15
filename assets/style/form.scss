@@ -1,0 +1,39 @@
+.form-floating {
+  @apply relative mb-8;
+
+  .form-control {
+    @apply border-b border-neutral-300 border-solid focus:ring-0 focus:shadow-none w-full pb-1 outline-none;
+
+    &.is-invalid {
+      @apply border-red-700;
+    }
+
+    &::placeholder {
+      @apply opacity-0;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      + label {
+        @apply translate-y-[-1.2rem] text-[13px] opacity-70;
+      }
+    }
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+
+  label {
+    @apply transition-all duration-300 absolute top-0 left-0 h-full pointer-events-none text-neutral-400;
+  }
+
+  button[type="submit"] {
+    @apply cursor-not-allowed pointer-events-none;
+  }
+}
+
+.just-validate-error-label {
+  @apply text-sm mt-2;
+}

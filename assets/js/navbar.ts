@@ -1,23 +1,25 @@
 (function () {
-  let lastScroll = 0;
+  document.addEventListener("turbo:load", () => {
+    let lastScroll = 0;
 
-  const headerEl = document.querySelector("header")!;
+    const headerEl = document.querySelector("header")!;
 
-  document.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
+    document.addEventListener("scroll", () => {
+      const currentScroll = window.scrollY;
 
-    if (currentScroll < 200) {
-      headerEl.classList.remove("-translate-y-full");
-      return;
-    }
+      if (currentScroll < 200) {
+        headerEl.classList.remove("-translate-y-full");
+        return;
+      }
 
-    if (lastScroll > currentScroll) {
-      headerEl.classList.remove("-translate-y-full");
-    } else {
-      headerEl.classList.add("-translate-y-full");
-    }
+      if (lastScroll > currentScroll) {
+        headerEl.classList.remove("-translate-y-full");
+      } else {
+        headerEl.classList.add("-translate-y-full");
+      }
 
-    lastScroll = currentScroll;
+      lastScroll = currentScroll;
+    });
   });
 })();
 

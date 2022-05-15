@@ -1,0 +1,25 @@
+<section>
+
+<div class="container mx-auto">
+
+<div class="bg-white relative shadow-xl top-[-70px] rounded-xl py-12 px-12">
+
+<div class="grid lg:grid-cols-2 gap-x-14 gap-y-8 items-center">
+
+<div class="mb-8 lg:mb-0">
+
+<h2 class="text-3xl mb-4">{{post.meta("second_title") }}</h2>
+
+<p class="mb-10 text-lg">{{ post.meta("description") }}</p>
+
+{% include "/pages/partnerships/form/form.twig" %}
+
+</div>
+
+<div>{% include "components/entities_circle.twig" with { 'entities': entities} %}</div>
+
+</div>
+
+</div>
+
+</section>

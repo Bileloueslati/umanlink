@@ -2,7 +2,7 @@
   .item {
     @apply mb-1;
     .header {
-      @apply flex justify-between border-b border-neutral-300 border-solid py-4;
+      @apply flex justify-between border-b border-neutral-300 border-solid pb-4;
     }
 
     .body {

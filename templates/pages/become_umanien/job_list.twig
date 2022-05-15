@@ -1,0 +1,59 @@
+
+<section id="job_list" class="pb-20" style="background: #F8FBFF">
+
+<div class="container mx-auto">
+
+<div class="mb-10">
+
+<span class="small_title">Rejoignez UmanLink</span>
+
+<h2 class="font-bold text-3xl mb-4 text-secondary">Retrouvez toutes les opportunités de nos entités</h2>
+
+<p class="text-lg mb-0">{{ group.description }} </p>
+
+</div>
+
+{% for job in jobs %}
+
+<div class="job bg-white shadow rounded-lg flex items-center justify-between py-4 px-6 mb-5">
+
+<div class="flex lg:flex-row flex-col items-center">
+
+{% set entity = Post(job.entity) %}
+
+<div class="w-[80px] mr-10">
+
+<img src="{{ entity.meta("logo") }}" class="max-h-[70px] object-cover" alt="{{ entity }}" />
+
+</div>
+
+<div class="flex flex-col">
+
+<h3 class="text-xl text-secondary job_title">{{ job.title }}</h3>
+
+
+<ul class="list-none flex mt-3">
+
+<li class="entity after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block">{{ entity }}</li>
+
+<li class="location after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block">{{ job.location }}</li>
+
+<li class="time">{{ job._time }}</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div><button class="rounded-full border border-primary text-primary transition-all hover:bg-primary hover:text-white px-6 py-2 font-medium" data-target="modal" data-toggle="modal">Postuler</button></div>
+
+
+</div>
+
+
+{% endfor %}
+
+</div>
+
+</section>

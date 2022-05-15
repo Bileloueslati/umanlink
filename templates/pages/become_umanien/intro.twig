@@ -1,0 +1,19 @@
+{% set group = post.meta('intro') %}
+
+<div class="container mx-auto">
+
+<div class="bg-white shadow py-12 px-10 rounded-xl relative overflow-hidden top-[-50px]">
+
+<div class="w-2/3">
+
+<h2 class="font-bold text-3xl mb-4">{{ group.title }}</h2>
+
+<p class="text-lg mb-0">{{ group.description }} </p>
+
+</div>
+
+<img src="{{ group.image }}" class="absolute top-0 right-0 h-[100%] pointer-events-none" alt="" />
+
+</div>
+
+</div>

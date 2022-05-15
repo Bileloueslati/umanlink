@@ -12,7 +12,9 @@
         }
     ],
     "require": {
-        "timber/timber": "^1.19"
+        "timber/timber": "^1.19",
+        "rakit/validation": "^1.4",
+        "filp/whoops": "^2.14"
     },
     "config": {
         "allow-plugins": {

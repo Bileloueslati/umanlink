@@ -7,4 +7,6 @@ $context = Timber::get_context();
 
 $context["post"] = new Post();
 
-Timber::render("pages/entity/single.twig", $context);
+$context["blocks"] = ["banner", "intro", "success", "career"];
+
+Timber::render("pages/cpt/entity/single.twig", $context);

@@ -18,3 +18,4 @@ $context["post"] = new Post();
 $context["entities"] = Entity::getPosts();
 
 Timber::render("pages/home/index.twig", $context);
+

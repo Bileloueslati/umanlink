@@ -1,0 +1,41 @@
+<section class="relative top-[-50px]">
+
+<div class="container mx-auto">
+
+<div class="grid lg:grid-cols-3 gap-x-20 gap-y-10">
+
+{% for item in post.meta("list") %}
+
+{% set entity = Post(item.entity) %}
+
+<div class="bg-white shadow-md rounded-lg py-10 px-6">
+
+<div class="h-[80px]">
+
+<a href="{{ entity.link }}">
+
+<img src="{{ entity.meta("logo") }}" class="max-h-[70px] object-cover" alt="{{ entity }}" />
+
+</a>
+
+</div>
+
+<h3 class="text-lg mb-3">{{ item.title }}</h3>
+
+<p class="mb-8">{{ item.description }}</p>
+
+<a href="{{ entity.link }}" class="rounded-full border bg-primary text-white transition-all px-6 py-2 font-medium">
+
+En savoir plus
+
+</a>
+
+</div>
+
+{% endfor %}
+
+
+</div>
+</div>
+
+</section>

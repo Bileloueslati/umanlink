@@ -2,6 +2,7 @@
 @import "./fonts/futura/futura.css";
 @import "./home.scss";
 @import "./accodion.scss";
+@import "./form.scss";
 
 body {
   @apply font-futura;
@@ -17,18 +18,15 @@ h6 {
 }
 
 p {
-
   @apply mb-6;
 }
 
 .small_title {
+  @apply font-medium text-primary after:relative mb-3 block text-lg;
 
-   @apply font-medium text-primary after:relative mb-3 block text-lg;
-
-   &:after {
-
-        @apply w-[50px] h-[3px] bg-primary inline-block rounded-lg ml-2 top-[-3px];  
-   }
+  &:after {
+    @apply w-[50px] h-[3px] bg-primary inline-block rounded-lg ml-2 top-[-3px];
+  }
 }
 
 /** NAV */
@@ -51,7 +49,6 @@ p {
     }
   }
 }
-
 
 /** ENTITIES CIRCLE */
 
@@ -87,6 +84,20 @@ p {
     &:nth-child(5) {
       top: 100px;
       left: -50px;
+    }
+  }
+}
+
+/* BANNER TITLE */
+
+.banner-title {
+  @apply bg-secondary text-white py-32;
+
+  h1 {
+    @apply text-4xl leading-[3rem];
+
+    span {
+      @apply text-teal-400;
     }
   }
 }

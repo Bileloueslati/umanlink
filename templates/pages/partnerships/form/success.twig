@@ -1,0 +1,19 @@
+<turbo-frame id="partnerships_form">
+
+<h3 class="text-green-700 text-xl mb-4">Nous avons bien reçu votre message</h3>
+
+<ul>
+
+{% for key, value in submittedData %}
+
+{% if value %}
+
+<li class="mb-2"> {{ labels[key] | capitalize }} : {{ value }} </li>
+
+{% endif %}
+
+{% endfor %}
+
+</ul>
+
+</turbo-frame>
