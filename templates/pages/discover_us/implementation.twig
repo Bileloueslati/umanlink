@@ -1,19 +1,19 @@
 
 {% set group = post.meta('implementation') %}
 
-<section id="implementation" class="bg-secondary mb-10 py-10">
+<section id="implementation" class="bg-[#001846] pt-16 pb-6">
 
 <div class="container mx-auto">
 
-<div class="grid grid-cols-2 gap-x-20">
+<div class="grid lg:grid-cols-2 gap-y-16 lg:gap-x-20">
 
 {% for item in group.block %}
 
-<div class="flex flex-col text-center lg:px-10">
+<div class="flex flex-col text-center px-8 lg:px-10">
 
-<div><i class="fa {{ item.icon }} text-teal-400 text-3xl" aria-hidden="true"></i></div>
+<div><img src="{{ item.icon }}" class="h-[50px] w-[50px] pointer-events-none block mx-auto" at="" ></div>
 
-<h4 class="text-teal-400 text-xl my-4"> {{ item.title }}</h4>
+<h4 class="text-teal-400 text-xl lg:text-2xl my-4"> {{ item.title }}</h4>
 
 <p class="text-white">{{ item.description }}</p>
 
@@ -24,4 +24,9 @@
 </div>
 
 </div>
+
 </section>
+
+<section class="hidden lg:block mb-10 h-[400px] w-full bg-cover bg-center bg-no-repeat bg-[#001846]" style="background-image: url({{group.background_image}})">
+</section>
+

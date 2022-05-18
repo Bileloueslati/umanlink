@@ -1,28 +1,34 @@
 @font-face {
-    font-family: "futura";
-    font-style: normal;
-    font-weight: 300;
-    src: local("futura"), url("FuturaStd-Light.otf") format("opentype");
-  }
+  font-family: "futura";
+  font-style: normal;
+  font-weight: 300;
+  src: local("futura"), url("FuturaStd-Light.otf") format("opentype");
+}
 
+@font-face {
+  font-family: "futura";
+  font-style: normal;
+  font-weight: 400;
+  src: local("futura"), url("FuturaStd-Book.otf") format("opentype");
+}
 
-  @font-face {
-    font-family: "futura";
-    font-style: normal;
-    font-weight: 400;
-    src: local("futura"), url("FuturaStd-Book.otf") format("opentype");
-  }
+@font-face {
+  font-family: "futura";
+  font-style: normal;
+  font-weight: 500;
+  src: local("futura"), url("FuturaStd-Medium.otf") format("opentype");
+}
 
-  @font-face {
-    font-family: "futura";
-    font-style: normal;
-    font-weight: 500;
-    src: local("futura"), url("FuturaStd-Medium.otf") format("opentype");
-  }
+@font-face {
+  font-family: "futura";
+  font-style: normal;
+  font-weight: 700;
+  src: local("futura"), url("FuturaStd-Bold.otf") format("opentype");
+}
 
-  @font-face {
-    font-family: "futura-oblique";
-    font-style: normal;
-    font-weight: 300;
-    src: local("futura"), url("FuturaStd-BookOblique.otf") format("opentype");
-  }
+@font-face {
+  font-family: "futura-oblique";
+  font-style: normal;
+  font-weight: 300;
+  src: local("futura"), url("FuturaStd-BookOblique.otf") format("opentype");
+}

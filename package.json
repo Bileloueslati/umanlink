@@ -24,7 +24,6 @@
   "dependencies": {
     "@hotwired/turbo": "^7.1.0",
     "font-awesome": "^4.7.0",
-    "just-validate": "^3.7.0",
     "pristinejs": "^0.1.9",
     "swiper": "^8.1.4"
   }

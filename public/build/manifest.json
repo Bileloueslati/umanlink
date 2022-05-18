@@ -2,8 +2,8 @@
   "wp-content/themes/umanlink/public/build/app.css": "/wp-content/themes/umanlink/public/build/app.css",
   "wp-content/themes/umanlink/public/build/app.js": "/wp-content/themes/umanlink/public/build/app.js",
   "wp-content/themes/umanlink/public/build/runtime.js": "/wp-content/themes/umanlink/public/build/runtime.js",
-  "wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-064916.css": "/wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-064916.css",
-  "wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-064916.js": "/wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-064916.js",
+  "wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-f175cc.css": "/wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-f175cc.css",
+  "wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-f175cc.js": "/wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-f175cc.js",
   "wp-content/themes/umanlink/public/build/images/fontawesome-webfont.svg?v=4.7.0": "/wp-content/themes/umanlink/public/build/images/fontawesome-webfont.c1e38fd9.svg",
   "wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.eot?v=4.7.0": "/wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.8b43027f.eot",
   "wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.ttf?v=4.7.0": "/wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.1e59d233.ttf",
@@ -15,8 +15,8 @@
   "wp-content/themes/umanlink/public/build/fonts/GothamBookItalic.ttf": "/wp-content/themes/umanlink/public/build/fonts/GothamBookItalic.3de1b843.ttf",
   "wp-content/themes/umanlink/public/build/fonts/Gotham-Light.otf": "/wp-content/themes/umanlink/public/build/fonts/Gotham-Light.59aa4004.otf",
   "wp-content/themes/umanlink/public/build/fonts/FuturaStd-BookOblique.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-BookOblique.4c128925.otf",
+  "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Bold.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Bold.32eb35b8.otf",
   "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Light.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Light.6072c282.otf",
   "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Book.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Book.16b60add.otf",
-  "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Medium.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Medium.eae453c7.otf",
-  "wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-2410af.js": "/wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-2410af.js"
+  "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Medium.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Medium.eae453c7.otf"
 }
