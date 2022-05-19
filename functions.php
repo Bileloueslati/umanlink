@@ -133,6 +133,7 @@ class StarterSite extends Site
 		$context['menu']  = new Menu();
 		$context['site']  = $this;
 		$context["footer"] = get_field("footer", "option");
+		$context["header"] = ["button" => get_field("contact_button", "option"), "contact_modal" => get_field("contact_modal", "option")];
 		$context["site"]->logo  = wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full');
 		// dd($context);
 		return $context;
@@ -202,7 +203,7 @@ class StarterSite extends Site
 	public function add_to_twig(TwigEnv $twig)
 	{
 
-		 $twig->addExtension(new StringLoaderExtension());
+		$twig->addExtension(new StringLoaderExtension());
 		// $twig->addFilter(new TwigFilter('myfoo', array($this, 'myfoo')));
 		return $twig;
 	}

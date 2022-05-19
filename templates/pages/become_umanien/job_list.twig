@@ -1,16 +1,16 @@
 
 {% if jobs is not empty %}
 
-<section id="job_list" class="pb-20" style="background: #F8FBFF">
+<section id="job_list" class="py-20" style="background: #F8FBFF">
 
 <div class="container mx-auto">
 
-<div class="mb-10 flex justify-between items-center">
+<div class="mb-10 flex lg:flex-row flex-col lg:justify-between lg:items-center">
 
 <div>
-<span class="small_title">Rejoignez UmanLink</span>
+<span class="small_title">Carrières</span>
 
-<h2 class="font-bold text-3xl mb-4 text-secondary">Retrouvez toutes les opportunités de nos entités</h2>
+<h2 class="font-bold text-2xl lg:text-3xl mb-4 text-secondary">Retrouvez toutes les opportunités de nos entités</h2>
 
 <p class="text-lg mb-0">{{ group.description }} </p>
 
@@ -18,7 +18,7 @@
 
 <div>
 
-<select id="job_filter" class="border px-6 py-2 outline-none rounded-full">
+<select id="job_filter" class="border px-6 py-2 outline-none">
 
 <option value="all">Toutes les entités</option>
 
@@ -40,9 +40,9 @@
 
 {% set entity = Post(job.entity) %}
 
-<div class="job bg-white shadow rounded-lg flex items-center justify-between py-4 px-6 mb-5" data-entity="{{ function("str_replace", " ", "", entity) | lower }}">
+<div class="job bg-white shadow rounded-lg flex lg:flex-row flex-col lg:items-center lg:justify-between py-4 px-6 mb-5 transition-all duration-400 delay-200" data-entity="{{ function("str_replace", " ", "", entity) | lower }}">
 
-<div class="flex lg:flex-row flex-col items-center">
+<div class="flex flex-row items-center">
 
 <div class="w-[80px] mr-10">
 
@@ -52,15 +52,15 @@
 
 <div class="flex flex-col">
 
-<h3 class="text-xl text-secondary job_title">{{ job.title }} </h3>
+<h3 class="text-xl text-secondary" data-target="job_title" data-value="{{ job.title }}">{{ job.title }} </h3>
 
 <ul class="list-none flex mt-3">
 
-<li class="entity after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block">{{ entity }}</li>
+<li data-target="entity" data-value={{ entity }} class="after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block">{{ entity }}</li>
 
-<li class="location after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block">{{ job.location }}</li>
+<li data-target="location" data-value="{{ job.location }}" class="after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block">{{ job.location }}</li>
 
-<li class="time">{{ job._time }}</li>
+<li data-target="time" data-value="{{ job._time }}">{{ job._time }}</li>
 
 </ul>
 
@@ -68,7 +68,11 @@
 
 </div>
 
-<div><button class="outline-none rounded-full border border-primary text-primary transition-all hover:bg-primary hover:text-white px-6 py-2 font-medium" data-target="modal" data-toggle="modal">Postuler</button></div>
+<div class="lg:ml-0 ml-28 lg:mt-0 mt-4">
+
+<button class="outline-none rounded-full border border-primary text-primary transition-all hover:bg-primary hover:text-white px-4 lg:px-6 py-1 lg:py-2 font-medium" data-target="job_modal" data-toggle="modal">Postuler</button>
+
+</div>
 
 
 </div>

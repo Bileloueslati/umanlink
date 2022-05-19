@@ -18,8 +18,7 @@ h6 {
 }
 
 strong {
-
-  @apply font-bold
+  @apply font-bold;
 }
 
 p {
@@ -104,5 +103,25 @@ p {
     span {
       @apply text-teal-400;
     }
+  }
+}
+
+.spinner {
+  @apply inline-block w-[25px] h-[25px];
+
+  &:after {
+    content: "";
+    @apply block w-[25px] h-[25px] rounded-full border-4;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

@@ -4,7 +4,7 @@
 			
 			<a href="{{ site.url }}"><img src="{{ site.logo}}" alt={{site.name}} /></a>
 
-			<div class="hidden xl:flex">
+			<div class="hidden lg:items-center xl:flex">
  
 			<nav id="primary-nav" class="hidden lg:block mr-10" role="navigation">
 				{% if menu %}
@@ -19,7 +19,7 @@
 				{% endif %}
 			</nav>
 
-			<div><a class="bg-primary rounded-full py-3 px-6 text-white hover:opacity-80 text-md" href="/">Contactez-nous</a></div>
+			<div><button class="bg-primary rounded-full py-3 px-6 text-white hover:opacity-80 text-md font-gotham font-medium outline-none" data-target="contact_modal" data-toggle="modal">Contactez-nous</button></div>
 
 
 		</div>

@@ -3,11 +3,11 @@
     "app": {
       "js": [
         "/wp-content/themes/umanlink/public/build/runtime.js",
-        "/wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-f175cc.js",
+        "/wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-e199ab.js",
         "/wp-content/themes/umanlink/public/build/app.js"
       ],
       "css": [
-        "/wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-f175cc.css",
+        "/wp-content/themes/umanlink/public/build/vendors-node_modules_hotwired_turbo_dist_turbo_es2017-esm_js-node_modules_core-js_modules_es_-e199ab.css",
         "/wp-content/themes/umanlink/public/build/app.css"
       ]
     }

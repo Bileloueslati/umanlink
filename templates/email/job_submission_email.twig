@@ -1,0 +1,31 @@
+{%
+ 
+ set labels = {
+
+      'first_name': 'Prénom',
+      'last_name': 'Nom',
+      'phone': 'Numéro de téléphone',
+      'email': 'email',
+	  'entity': 'Entité',
+	  'job': 'Poste'
+ }
+
+ %}
+
+<h2>Bonjour</h2>
+
+<p>Une candidature vient de vous étre envoyée</p>
+
+<ul>
+
+	{% for key, val in data %}
+
+		<li>
+			<strong>{{ labels[key] }}
+				:</strong>
+			{{ val }}</li>
+
+	{% endfor %}
+
+
+</ul>

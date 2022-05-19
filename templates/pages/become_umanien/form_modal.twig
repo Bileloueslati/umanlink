@@ -1,4 +1,5 @@
-<div id="modal" class="modal" role="dialog">
+
+<div id="job_modal" class="modal" role="dialog">
 
 <div class="modal-dialog centered">
 
@@ -8,15 +9,15 @@
 
 <div>
 
-<h3 class="font-gotham text-2xl" id="job_title"></h3>
+<h3 class="font-gotham text-2xl job_title"></h3>
 
 <ul class="list-none flex mt-3">
 
-<li id="entity" class="after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block"></li>
+<li class="entity after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block"></li>
 
-<li id="location" class="after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block"></li>
+<li class="location after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block"></li>
 
-<li id="time"></li>
+<li class="time"></li>
 
 </ul>
 
@@ -30,7 +31,15 @@
 
 <div class="modal-body">
 
-<form class="mt-6">
+<!-- success message -->
+
+<div id="success_message" style="display: none">
+<h2 class="text-2xl text-green-700 text-center">Votre candidature a été envoyée</h2>
+</div>
+
+<!-- success message -->
+
+<form id="job_application" class="mt-6" method="post" data-action="{{ post.link }}" autocomplete="off" data-turbo="false">
 
 <div class="grid lg:grid-cols-2 gap-x-10 gap-y-6">
 
@@ -65,9 +74,38 @@
 <label for="phone">Numéro de téléphone</label>
 
 </div>
+</div> <!-- /.grid -->
+
+<div>
+
+<input id="file" type="file" class="form-control hidden opacity-0" accept="application/pdf, image/*" />
+
+<label for="file" class="border border-dashed border-gray-300 bg-[#F8FBFF] flex flex-col px-6 py-6 justify-center items-center">
+
+<span class="mb-2"><i class="fa fa-upload text-xl text-primary"></i></span>
+
+<span class="font-medium font-gotham text-lg text-primary">Attachez votre CV</span>
+
+<div class="mt-3 text-sm flex flex-col items-center">
+
+<span>La taille du fichier ne doit pas dépasser 10 Mo.</span>
+
+<span>Fichier supporté PDF, DOC</span>
+
 </div>
 
-<button type="submit" class="table mt-5 mx-auto border border-primary text-primary hover:bg-primary transition-all rounded-full py-2 px-6 hover:text-white hover:opacity-80">Envoyer votre candidature</button>
+</label>
+
+</div>
+
+<input type="hidden" name="job" class="job_title" />
+
+<input type="hidden" class="entity" name="entity" />
+
+<button type="submit" class="flex items-center mt-5 mx-auto border text-white bg-primary transition-all rounded-full py-2 px-6 hover:opacity-60 disabled:bg-opacity-50">
+<span class="spinner flex mr-3" style="display:none"></span>
+<span>Envoyer votre candidature</span>
+</button>
 
 </form>
 

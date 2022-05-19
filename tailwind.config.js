@@ -1,5 +1,14 @@
 module.exports = {
-  content: ["templates/**/*.twig", "templates/partial/*.twig", "assets/**/*.{ts,js}"],
+  plugins: [require("tailwind-scrollbar")],
+  variants: {
+    scrollbar: ['rounded']
+},
+  content: [
+    "templates/**/*.twig",
+    "templates/partial/*.twig",
+    "assets/**/*.{ts,js}",
+    "assets/js/*.{ts,js}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -9,7 +18,7 @@ module.exports = {
       fontFamily: {
         gotham: "Gotham, Arial, sans-serif",
         futura: "futura, Arial, sans-serif",
-        futuraOblique: "futura-oblique, Arial, sans-serif"
+        futuraOblique: "futura-oblique, Arial, sans-serif",
       },
 
       container: {
@@ -23,5 +32,4 @@ module.exports = {
       },
     },
   },
-  plugins: [],
 };

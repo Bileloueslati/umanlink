@@ -1,27 +1,35 @@
 document.addEventListener("turbo:load", () => {
+  const modalHiddenEvent = new Event("modal-hidden");
+
+  const modalShowEvent = new Event("modal-show");
+
   const handleVisiblity = (action: "show" | "hide", modal: HTMLElement) => {
     if (action === "show") {
       document.body.style.overflow = "hidden";
       modal.classList.add("show");
+      modal.dispatchEvent(modalShowEvent);
     } else {
       document.body.style.removeProperty("overflow");
       modal.classList.remove("show");
+      modal.dispatchEvent(modalHiddenEvent);
     }
   };
 
-  document.querySelectorAll("button").forEach((btn) => {
-    const target = btn.dataset.target;
+  document
+    .querySelectorAll<HTMLButtonElement>("[data-toggle=modal]")
+    .forEach((btn) => {
+      const target = btn.dataset.target;
 
-    if (target === "modal") {
-      const modal = document.getElementById(target);
+      if (target) {
+        const modal = document.getElementById(target);
 
-      if (modal) {
-        btn.addEventListener("click", () => {
-          handleVisiblity("show", modal);
-        });
+        if (modal) {
+          btn.addEventListener("click", () => {
+            handleVisiblity("show", modal);
+          });
+        }
       }
-    }
-  });
+    });
 
   document.querySelectorAll<HTMLElement>(".modal").forEach((modal) => {
     document.addEventListener("keydown", (e) => {

@@ -12,8 +12,10 @@ document.addEventListener("turbo:load", () => {
 
         if (target === entity || entity === "all") {
           job.style.display = "flex";
+          job.style.opacity = "1";
         } else {
           job.style.display = "none";
+          job.style.opacity = "0";
         }
       });
     });
