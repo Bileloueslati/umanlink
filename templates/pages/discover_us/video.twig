@@ -1,9 +1,26 @@
-<div class="relative top-[-50px] block mx-auto w-1/2">
+{% set video = post.meta("video") %}
+
+{% if video %}
+
+<div class="relative top-[-50px] hidden lg:block mx-auto w-1/2">
+<div>
 
 <img src="{{ post.meta("video_image") }}" class="max-h-[500px] w-full rounded-lg object-cover blur-[2px]" alt="{{ group.title }}" />
 
-<button class="h-14 w-14 rounded-full bg-white text-secondary transition-all hover:bg-secondary hover:text-white absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-lg">
+<button class="video_play z-50 h-14 w-14 rounded-full bg-white text-secondary transition-all hover:bg-secondary hover:text-white absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-lg">
 <i class="fa fa-play" aria-hidden="true"></i>
 </button>
 
 </div>
+
+<div class="absolute overflow-hidden inset-0 inner h-[500px] w-full" style="display:none">
+ <video class="video_player vjs-default-skin vjs-16-9" width="780px" height="500px">
+    <source src="{{ video.url }}" type="video/mp4" />
+  </video>
+</div>
+
+</div>
+
+
+{% endif %}
+

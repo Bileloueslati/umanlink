@@ -59,35 +59,30 @@ p {
 .entities_circles {
   @apply relative;
   .item {
-    @apply absolute flex items-center justify-center border-2 border-dashed rounded-full h-[150px] w-[150px] bg-white transition-transform hover:scale-110;
+    @apply absolute flex items-center justify-center border-2 border-dashed rounded-full h-[100px] lg:h-[150px] w-[100px] lg:w-[150px] bg-white transition-transform hover:scale-110;
 
     img {
-      @apply max-h-[60px] max-w-[110px] w-auto object-cover;
+      @apply max-h-[40px] max-w-[90px] lg:max-w-[110px] lg:w-auto object-cover;
     }
 
     &:nth-child(1) {
-      top: -50px;
-      right: 150px;
+      @apply lg:-top-[90px] -top-[60px] right-1/4;
     }
 
     &:nth-child(2) {
-      top: 100px;
-      right: -50px;
+      @apply top-[100px] lg:-right-[50px] -right-[25px];
     }
 
     &:nth-child(3) {
-      top: 300px;
-      right: -50px;
+      @apply lg:top-[300px] lg:bottom-0 -bottom-[20px] right-0 lg:-right-[50px];
     }
 
     &:nth-child(4) {
-      top: 350px;
-      right: 220px;
+      @apply lg:top-[350px] lg:left-0 lg:-right-0 lg:bottom-0 -bottom-[15px];
     }
 
     &:nth-child(5) {
-      top: 100px;
-      left: -50px;
+      @apply lg:top-[100px] lg:left-[-50px];
     }
   }
 }

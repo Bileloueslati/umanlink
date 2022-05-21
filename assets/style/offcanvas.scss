@@ -1,0 +1,70 @@
+.offcanvas {
+  @apply invisible opacity-0 flex flex-col transition-all duration-300 translate-x-[-100%] fixed h-screen top-0 left-0 z-[1050] lg:hidden w-full;
+
+  &.show {
+    @apply visible opacity-100 transform-none;
+  }
+
+  &#menu_offcanvas {
+    @apply bg-secondary text-white py-6 px-4;
+
+    ul.navigation {
+      li {
+        @apply mb-10;
+
+        a {
+          @apply font-gotham font-medium text-xl;
+        }
+
+        &.current-menu-item {
+          a {
+            @apply text-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+button.hamburger {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 20px;
+
+  &:before {
+    content: "";
+    @apply inset-0 absolute rounded-[20px];
+    transform: rotate(0deg);
+    transition: all 0.4s cubic-bezier(0.54, -0.1, 0.57, 0.57);
+  }
+
+  .hamburger-line {
+    @apply w-full block relative h-1 rounded-md bg-secondary;
+    transition: transform 0.4s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+
+    &.first,
+    &.third {
+    }
+
+    &.third {
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .hamburger-line.second {
+      transform: rotate(-45deg);
+    }
+
+    .hamburger-line.first {
+      transform: translate(2px, 8px) rotate(-135deg);
+    }
+
+    .hamburger-line.third {
+      transform: translate(11px, -3px) rotate(-135deg);
+    }
+  }
+}

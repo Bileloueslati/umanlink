@@ -1,40 +1,48 @@
 
 <turbo-frame id="partnerships_form">
 
-<form id="form" method="post" action="{{ post.link }}" autocomplete="off" data-turbo-stream>
+<form id="form" method="post" action="/partenariats" autocomplete="off" data-turbo-stream>
 
 <div class="form-floating">
 
-<input class="form-control form__input" id="fullname" name="fullname" type="text" placeholder="Full name" required/>
+<input class="form-control {% if formErrors.fullname %}is-invalid{% endif %}" id="fullname" name="fullname" type="text" placeholder="Full name" required />
 
 <label for="fullname">Nom et prénom</label>
 
+{% if formErrors.fullname %}<span class="text-red-600 text-[14px]">{{ formErrors.fullname }}</span>{% endif %}
+
 </div>
 
 
 <div class="form-floating">
 
-<input class="form-control" id="company" name="company" type="text" placeholder="company" />
+<input class="form-control {% if formErrors.company %}is-invalid{% endif %}" id="company" name="company" type="text" placeholder="company" required />
 
 <label for="company">Société</label>
 
+{% if formErrors.company %}<span class="text-red-600 text-[14px]">{{ formErrors.company }}</span>{% endif %}
+
 </div>
 
 
 <div class="form-floating">
 
-<input class="form-control" id="email" name="email" type="email" placeholder="Email" data-pristine-type="email" required />
+<input class="form-control {% if formErrors.email %}is-invalid{% endif %}" name="email" type="email" placeholder="Email" required />
 
 <label for="email">Email</label>
 
+{% if formErrors.email %}<span class="text-red-600 text-[14px]">{{ formErrors.email }}</span>{% endif %}
+
 </div>
 
 
 <div class="form-floating">
 
-<input class="form-control" id="phone" name="phone" type="number" placeholder="Phone number" />
+<input class="form-control {% if formErrors.phone %}is-invalid{% endif %}" id="phone" name="phone" type="number" placeholder="Phone number" required />
 
 <label for="phone">Numéro de téléphone</label>
+
+{% if formErrors.email %}<span class="text-red-600 text-[14px]">{{ formErrors.phone }}</span>{% endif %}
 
 </div>
 

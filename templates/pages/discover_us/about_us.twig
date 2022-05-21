@@ -3,11 +3,12 @@
 
 <section class="py-16 relative">
 
-<img src="{{ group.image }}" class="max-h-[400px] lg:absolute right-0 top-0 bottom-0" alt="{{ group.title }}" />
+<img src="{{ group.image }}" class="max-h-[400px] lg:block hidden lg:absolute right-0 top-0 bottom-0" alt="{{ group.title }}" />
 
 <div class="container mx-auto">
 
-<div class="grid grid-cols-2 gap-x-16">
+<div class="grid lg:grid-cols-2 gap-x-16">
+
 
 <div>
 
@@ -16,6 +17,12 @@
 <h2 class="text-3xl mb-4">{{ group.title }} </h2>
 
 <div>{{ group.description }} </div>
+
+</div>
+
+<div class="lg:hidden mt-14 relative -left-12">
+
+<img src="{{ group.image }}" class="max-h-[400px] rotate-y-180" alt="{{ group.title }}" />
 
 </div>
 

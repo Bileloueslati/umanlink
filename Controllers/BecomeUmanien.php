@@ -39,7 +39,7 @@ $context["jobEntities"] = $jobEntities;
 
 $validator = new Validator([
 	'required' => 'Champ obligatoire',
-	'email' => 'Email invalid',
+	'email' => 'Email invalide',
 ]);
 
 $validation = $validator->make($_POST + $_FILES, [

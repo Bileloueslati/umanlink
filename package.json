@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@symfony/webpack-encore": "^1.8.2",
+    "@types/video.js": "^7.3.40",
     "autoprefixer": "^10.4.5",
     "core-js": "^3.22.3",
     "postcss": "^8.4.13",
@@ -26,6 +27,7 @@
     "@hotwired/turbo": "^7.1.0",
     "font-awesome": "^4.7.0",
     "pristinejs": "^0.1.9",
-    "swiper": "^8.1.4"
+    "swiper": "^8.1.4",
+    "videojs-ima": "^2.0.0"
   }
 }

@@ -73,12 +73,15 @@ class StarterSite extends Site
 	/** Add timber support. */
 	public function __construct()
 	{
+
 		add_action('after_setup_theme', array($this, 'theme_supports'));
 		add_filter('timber/context', array($this, 'add_to_context'));
 		add_filter('timber/twig', array($this, 'add_to_twig'));
 		add_action('init', array($this, 'register_post_types'));
 		add_action('init', array($this, 'register_taxonomies'));
 		add_action('wp_enqueue_scripts', [Actions::class, "remove_wp_block_library_css"], 100);
+		add_filter('wp_mail_from_name', [$this, 'mail_from_name']);
+		add_filter('wp_mail_from', [$this, 'mail_from']);
 		Actions::remove_default_links();
 		$this->registerOptionPage();
 		$this->debug();
@@ -133,7 +136,7 @@ class StarterSite extends Site
 		$context['menu']  = new Menu();
 		$context['site']  = $this;
 		$context["footer"] = get_field("footer", "option");
-		$context["header"] = ["button" => get_field("contact_button", "option"), "contact_modal" => get_field("contact_modal", "option")];
+		$context["header"] = ["mobile" => get_field("mobile", "option"), "button" => get_field("contact_button", "option"), "contact_modal" => get_field("contact_modal", "option")];
 		$context["site"]->logo  = wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full');
 		// dd($context);
 		return $context;
@@ -233,6 +236,17 @@ class StarterSite extends Site
 				'parent_slug'	=> 'theme-general-settings',
 			));
 		}
+	}
+
+	public function mail_from_name($name)
+	{
+
+		return $this->name;
+	}
+
+	public function mail_from($email)
+	{
+		return $this->admin_email;
 	}
 }
 

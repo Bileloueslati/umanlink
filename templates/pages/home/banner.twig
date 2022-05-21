@@ -1,7 +1,7 @@
 
 {% set hero = post.meta('hero_banner') %}
 
-<section class="relative h-[500px] lg:h-screen w-full text-white flex">
+<section class="relative h-[500px] lg:h-screen w-full text-white flex" data-turbo-permanent>
 
  <video class="hidden lg:block absolute inset-0 h-full w-full object-cover" poster="{{hero.image}}" muted autoplay loop>
     <source src="{{ hero.video }}" type="video/mp4" />
@@ -18,7 +18,7 @@
 
 <p class="mb-6 text-xl lg:text-2xl">{{ hero.description }}</p>
 
-<a class="bg-primary rounded-full py-2 px-10 text-white hover:opacity-80 text-lg font-gotham font-medium" id="btn" href="/">Explorer</a>
+<a class="bg-primary rounded-full py-2 px-10 text-white hover:opacity-80 text-lg font-gotham font-medium" id="btn" href="{{ hero.cta.link}}">{{ hero.cta.title}}</a>
 
 </div>
 

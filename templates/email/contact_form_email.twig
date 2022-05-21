@@ -1,0 +1,17 @@
+<h2>Bonjour</h2>
+
+<p>Vous venez de recevoir un message depuis le site {{ site.url }}</p>
+
+<ul>
+
+	{% for key, val in data %}
+
+		<li>
+			<strong>{{ labels[key] }}
+				:</strong>
+			{{ val }}</li>
+
+	{% endfor %}
+
+
+</ul>

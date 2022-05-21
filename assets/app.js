@@ -15,3 +15,7 @@ require("./js/modal");
 require("./js/job_filter");
 
 require("./js/job_form");
+
+require("./js/video_player");
+
+require("./js/off_canvas");
