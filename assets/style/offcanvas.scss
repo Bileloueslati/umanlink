@@ -8,6 +8,14 @@
   &#menu_offcanvas {
     @apply bg-secondary text-white py-6 px-4;
 
+    .close {
+
+      &:before,
+      &:after {
+        @apply bg-white;
+      }
+    }
+
     ul.navigation {
       li {
         @apply mb-8;
@@ -45,13 +53,6 @@ button.hamburger {
   .hamburger-line {
     @apply w-full block relative h-1 rounded-md bg-secondary;
     transition: transform 0.4s cubic-bezier(0.54, -0.81, 0.57, 0.57);
-
-    &.first,
-    &.third {
-    }
-
-    &.third {
-    }
   }
 
   &[aria-expanded="true"] {

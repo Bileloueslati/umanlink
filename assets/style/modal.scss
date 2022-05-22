@@ -2,7 +2,7 @@
   @apply fixed inset-0 z-[1000] bg-black bg-opacity-75 invisible;
 
   .modal-dialog {
-    @apply relative max-w-screen-sm lg:max-w-screen-md transition-transform duration-300 translate-y-[-50px] my-[1.75rem] mx-12 lg:m-auto opacity-0 overflow-y-auto;
+    @apply relative max-w-screen-sm lg:max-w-screen-md transition-transform duration-300 translate-y-[-50px] my-[1.75rem] mx-2 lg:m-auto opacity-0 overflow-y-auto;
 
     &.centered {
       @apply flex flex-col items-center justify-center min-h-full;
@@ -30,11 +30,11 @@
     max-height: calc(100vh - 50px);
 
     .modal-header {
-      @apply border-b border-gray-200 py-3 px-10 flex justify-between;
+      @apply border-b border-gray-200 py-3 px-8 flex justify-between;
     }
 
     .modal-body {
-      @apply py-6 px-10;
+      @apply py-3 px-8;
     }
   }
 }

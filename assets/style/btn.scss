@@ -1,0 +1,21 @@
+.close {
+  @apply relative opacity-70 transition-all;
+
+  &:hover {
+    @apply opacity-100;
+  }
+
+  &:before,
+  &:after {
+    @apply absolute left-[15px] h-[33px] w-[2px] bg-[#333];
+    content: " ";
+  }
+
+  &:before {
+    @apply rotate-[45deg];
+  }
+
+  &:after {
+    @apply -rotate-[45deg];
+  }
+}

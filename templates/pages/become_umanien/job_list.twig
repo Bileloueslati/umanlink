@@ -1,7 +1,7 @@
 
 {% if jobs is not empty %}
 
-<section id="job_list" class="py-20" style="background: #F8FBFF">
+<section id="job_list" class="py-10" style="background: #F8FBFF">
 
 <div class="container mx-auto">
 
@@ -40,25 +40,25 @@
 
 {% set entity = Post(job.entity) %}
 
-<div class="job bg-white shadow rounded-lg flex lg:flex-row flex-col lg:items-center lg:justify-between py-4 px-6 mb-5 transition-all duration-400 delay-200" data-entity="{{ function("str_replace", " ", "", entity) | lower }}">
+<div class="job bg-white shadow rounded-lg flex lg:flex-row flex-col lg:items-center lg:justify-between py-4 px-3 lg:px-6 mb-5 transition-all duration-400 delay-200" data-entity="{{ function("str_replace", " ", "", entity) | lower }}">
 
 <div class="flex flex-row items-center">
 
-<div class="w-[80px] mr-10">
+<div class="lg:w-[80px] w-[50px] lg:mr-6 mr-4">
 
-<img src="{{ entity.meta("logo") }}" class="max-h-[70px] object-cover" alt="{{ entity }}" />
+<img src="{{ entity.meta("logo") }}" class="lg:max-h-[70px] max-h-[50px] object-cover" alt="{{ entity }}" />
 
 </div>
 
 <div class="flex flex-col">
 
-<h3 class="text-xl text-secondary" data-target="job_title" data-value="{{ job.title }}">{{ job.title }} </h3>
+<h3 class="lg:text-xl text-lg text-secondary" data-target="job_title" data-value="{{ job.title }}">{{ job.title }} </h3>
 
-<ul class="list-none flex mt-3">
+<ul class="list-none flex lg:mt-3 mt-1 text-sm">
 
-<li data-target="entity" data-value={{ entity }} class="after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block">{{ entity }}</li>
+<li data-target="entity" data-value={{ entity }} class="after:h-2 after:w-2 lg:after:mx-4 after:mx-2 after:bg-teal-400 after:rounded-full after:inline-block">{{ entity }}</li>
 
-<li data-target="location" data-value="{{ job.location }}" class="after:h-2 after:w-2 after:mx-4 after:bg-teal-400 after:rounded-full after:inline-block">{{ job.location }}</li>
+<li data-target="location" data-value="{{ job.location }}" class="after:h-2 after:w-2 lg:after:mx-4 after:mx-2 after:bg-teal-400 after:rounded-full after:inline-block">{{ job.location }}</li>
 
 <li data-target="time" data-value="{{ job._time }}">{{ job._time }}</li>
 
