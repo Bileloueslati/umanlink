@@ -1,7 +1,7 @@
 
 {% set hero = post.meta('hero_banner') %}
 
-<section class="relative h-[500px] lg:h-screen w-full text-white flex" data-turbo-permanent>
+<section class="relative h-[500px] lg:h-screen w-full text-white flex">
 
  <video class="hidden lg:block absolute inset-0 h-full w-full object-cover" poster="{{hero.image}}" muted autoplay loop>
     <source src="{{ hero.video }}" type="video/mp4" />
