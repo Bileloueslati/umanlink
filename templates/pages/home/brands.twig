@@ -31,7 +31,7 @@
 
 </div>
 
-<div class="slider swiper mt-14" data-xs="1.5" data-md="2.5" data-lg="3.5">
+<div class="slider swiper mt-14" data-xs="1.1" data-md="2.5" data-lg="3.5">
 
 <div class="swiper-wrapper">
 
@@ -39,13 +39,15 @@
 
 {% set entity = Post(item.entity) %}
 
-<div class="item swiper-slide bg-cover bg-center h-[400px] rounded-xl flex flex-col justify-end px-4 pt-6" style="background-image: url({{ item.image }})">
+<div class="item swiper-slide bg-cover bg-center h-[400px] rounded-xl flex flex-col justify-end px-4 pt-6 relative" style="background-image: url({{ item.image }})">
 
 <div class="overlay z-0"></div>
 
-<div class="content">
+<a class="absolute block h-full w-full z-50" href="{{ entity.link }}"></a>
 
-<div class="mb-2">
+<div class="content lg:pb-0 pb-8">
+
+<div class="lg:mb-2 mb-4">
 
 {% if item.custom_entity_logo %}
 

@@ -10,9 +10,11 @@
 
 			{% for item in become_umanien.blocks %}
 
-				<div class="item rounded-xl flex flex-col justify-end bg-cover bg-center h-[300px] w-full" style="background-image: url({{ item.image }})">
+				<div class="item rounded-xl flex flex-col justify-end bg-cover bg-center h-[300px] w-full relative" style="background-image: url({{ item.image }})">
 
 					<div class="overlay"></div>
+
+					<a class="absolute block h-full w-full z-50" href="{{ item.button_link }}"></a>
 
 					<div class="content px-8 pb-4">
 

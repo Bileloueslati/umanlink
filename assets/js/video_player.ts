@@ -25,8 +25,6 @@ document.addEventListener("turbo:load", () => {
         video.play();
       });
     }
-
-    console.log(video);
   });
 });
 

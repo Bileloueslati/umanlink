@@ -19,3 +19,8 @@ require("./js/job_form");
 require("./js/video_player");
 
 require("./js/off_canvas");
+
+document.addEventListener("turbo:before-render", function(e) {
+      
+    console.log("before cache", e);
+  })
