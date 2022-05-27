@@ -114,7 +114,9 @@ class StarterSite extends Site
 	public function getAssets(): array
 	{
 
-		$templatePath = get_template_directory_uri();
+		$templatePath = get_template_directory();
+
+		// dd(get_template_directory());
 
 		$entrypointsPath = sprintf("%s/public/build/entrypoints.json", $templatePath);
 
