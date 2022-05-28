@@ -10,10 +10,12 @@
  */
 
 use App\Actions;
+use App\MobileDetector\MobileDetector;
 use Timber\Menu;
 use Timber\Site;
 use Timber\Timber;
 use Timber\Twig;
+use Timber\Twig_Function;
 use Twig\Extension\StringLoaderExtension;
 use Twig\TwigFilter;
 use Twig\Environment as TwigEnv;
@@ -209,7 +211,10 @@ class StarterSite extends Site
 	{
 
 		$twig->addExtension(new StringLoaderExtension());
-		// $twig->addFilter(new TwigFilter('myfoo', array($this, 'myfoo')));
+		$twig->addFunction(new Twig_Function("isMobile", function() {
+
+			 return MobileDetector::isMobile();
+		}));
 		return $twig;
 	}
 

@@ -40,7 +40,7 @@ p {
   ul {
     @apply list-none flex;
     li {
-      @apply mr-10;
+      @apply mr-4 xl:mr-10;
 
       &:first-child {
         @apply lg:hidden;
@@ -53,7 +53,7 @@ p {
       }
 
       a {
-        @apply hover:text-primary text-secondary transition-colors text-lg font-medium;
+        @apply hover:text-primary text-secondary transition-colors font-medium xl:text-lg text-[15px];
       }
     }
   }

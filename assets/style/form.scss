@@ -2,7 +2,7 @@
   @apply relative mb-8;
 
   .form-control {
-    @apply border-b border-neutral-300 border-solid focus:ring-0 focus:shadow-none w-full pb-1 outline-none;
+    @apply border-b border-neutral-300 border-solid focus:ring-0 focus:shadow-none w-full pb-1 outline-none rounded-none;
 
     &.is-invalid {
       @apply border-red-700;

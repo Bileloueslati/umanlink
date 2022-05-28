@@ -4,17 +4,19 @@
 
 <div class="container mx-auto md:max-w-[1300px]">
 
-<div class="bg-white shadow py-12 px-10 rounded-xl relative overflow-hidden top-[-50px]">
+<div class="bg-white shadow py-12 px-6 lg:px-10 rounded-xl relative overflow-hidden top-[-50px]">
 
-<div class="w-2/3">
+<div class="lg:w-2/3">
 
-<h2 class="font-bold text-2xl lg:text-3xl mb-4">{{ group.title }}</h2>
+<h2 class="font-bold text-2xl lg:text-3xl mb-4 lg:pr-0 pr-[110px]">{{ group.title }}</h2>
 
 <p class="lg:text-lg mb-0">{{ group.description }} </p>
 
 </div>
 
-<img src="{{ group.image }}" class="absolute top-0 right-0 h-[200px] lg:h-[100%] pointer-events-none lg:w-[300px] w-[200px]" alt="" />
+<img src="{{ group.image }}" class="hidden lg:block absolute top-0 right-0 h-[100%] pointer-events-none w-[300px]" alt="" />
+
+<img src="{{ group.mobile_image }}" class="lg:hidden absolute top-0 right-0 h-[150px] pointer-events-none w-[130px]" alt="" />
 
 </div>
 
