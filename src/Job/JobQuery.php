@@ -7,11 +7,14 @@ use Timber\Timber;
 class JobQuery
 {
 
-    public static function getJobs(int $max = 20): array
+    public static function getJobs(int $max = 20, $args = []): array
     {
-        return Timber::get_posts([
+
+        $args = array_merge([
             'post_type' => 'job',
-            'posts_per_page' => $max,
-        ]);
+            'posts_per_page' => $max
+        ], $args);
+
+        return Timber::get_posts($args);
     }
 }

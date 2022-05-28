@@ -30,7 +30,7 @@
     max-height: calc(100vh - 50px);
 
     .modal-header {
-      @apply border-b border-gray-200 py-3 px-8 flex justify-between;
+      @apply border-b border-gray-200 py-4 px-8 flex justify-between;
     }
 
     .modal-body {

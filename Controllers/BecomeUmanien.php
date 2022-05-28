@@ -18,7 +18,10 @@ if (!function_exists('wp_handle_upload')) {
 
 $context = Timber::get_context();
 
-$jobs = JobQuery::getJobs();
+$jobs = JobQuery::getJobs(20, [
+    'meta_key' => 'isActive',
+    'meta_value' => 1
+]);
 
 $context["post"] = new Post();
 
@@ -38,8 +41,8 @@ $jobEntities = array_unique(array_map(
 $context["jobEntities"] = $jobEntities;
 
 $validator = new Validator([
-	'required' => 'Champ obligatoire',
-	'email' => 'Email invalide',
+    'required' => 'Champ obligatoire',
+    'email' => 'Email invalide',
 ]);
 
 $validation = $validator->make($_POST + $_FILES, [
@@ -61,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $message = Timber::fetch("email/job_submission_email.twig", [
 
-            "data" => array_filter($validation->getValidatedData(), fn($v) => !is_array($v))
+            "data" => array_filter($validation->getValidatedData(), fn ($v) => !is_array($v))
         ]);
 
         $file = $_FILES['file'];

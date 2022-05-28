@@ -9,10 +9,10 @@ document.addEventListener("turbo:load", () => {
       preload: "auto",
       language: "fr",
       muted: true,
-      fill: true
+      fill: true,
     });
 
-    const playBtn = document.querySelector(".video_play");
+    const playBtn = document.querySelector<HTMLButtonElement>(".video_play");
 
     if (playBtn) {
       playBtn.addEventListener("click", () => {
@@ -20,6 +20,7 @@ document.addEventListener("turbo:load", () => {
 
         if (elInner) {
           elInner.style.display = "block";
+          playBtn.style.display = "none";
         }
 
         video.play();

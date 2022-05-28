@@ -42,6 +42,10 @@ p {
     li {
       @apply mr-10;
 
+      &:first-child {
+        @apply lg:hidden;
+      }
+
       &.current-menu-item {
         a {
           @apply text-primary;
