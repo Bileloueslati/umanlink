@@ -296,8 +296,8 @@ class StarterSite extends Site
 	public function registerJobSubmissionAdminMenu()
 	{
 		add_menu_page(
-			'Job application',
-			'Job application',
+			'Job applications',
+			'Job applications',
 			'read',
 			'job_submission',
 			new JobSubmissionList(),
