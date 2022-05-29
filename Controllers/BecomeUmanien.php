@@ -7,6 +7,7 @@
  * @subpackage Umanlink
  */
 
+use App\Http\Request;
 use App\Job\JobQuery;
 use Timber\Post;
 use Timber\Timber;
@@ -45,6 +46,9 @@ $validator = new Validator([
     'email' => 'Email invalide',
 ]);
 
+
+$request = new Request();
+
 $validation = $validator->make($_POST + $_FILES, [
     'last_name' => 'required',
     'first_name' => 'required',
@@ -57,14 +61,15 @@ $validation = $validator->make($_POST + $_FILES, [
 
 $validation->validate();
 
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($request->isPostMethod()) {
 
     if ($validation->passes()) {
 
+        $data = $validation->getValidatedData();
+
         $message = Timber::fetch("email/job_submission_email.twig", [
 
-            "data" => array_filter($validation->getValidatedData(), fn ($v) => !is_array($v))
+            "data" => array_filter($data, fn ($v) => !is_array($v))
         ]);
 
         $file = $_FILES['file'];
@@ -81,11 +86,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             wp_send_json(["data" => $movefile], 400);
         }
-        wp_mail("mrbileltn@gmail.com", "Candidature", $message,  $headers, $attachments);
 
-        wp_send_json(["data" => $_POST], 200);
+        // save in DB
 
+        global $wpdb;
+
+        $tableName = sprintf("%sjob_submission", $wpdb->prefix);
+
+        try {
+
+            $wpdb->insert($tableName, array(
+                'created_at' => (new \DateTime())->format("Y-m-d H:i:s"),
+                'first_name' => htmlspecialchars($data['first_name']),
+                'last_name' => htmlspecialchars($data['last_name']),
+                'email' => htmlspecialchars($data['email']),
+                'phone' => htmlspecialchars($data['phone']),
+                'entity' => htmlspecialchars($data['entity']),
+                'job' => htmlspecialchars($data['job']),
+                'cv' => str_replace($context["http_host"], "", htmlspecialchars($movefile['url'])),
+            ));
+
+            wp_mail("mrbileltn@gmail.com", "Candidature", $message,  $headers, $attachments);
+        
+        } catch (\Exception $e) {
+
+            wp_send_json(["error" => $e->getMessage()], 400);
+            exit();
+        }
+
+        wp_send_json(["data" => $data], 200);
+        
         exit;
+    
     } else {
 
         $errors = $validation->errors();

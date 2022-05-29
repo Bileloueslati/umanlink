@@ -110,8 +110,9 @@ document.addEventListener("turbo:load", () => {
           submitBtn
             .querySelector<HTMLSpanElement>(".spinner")!
             .style.setProperty("display", "none");
-          console.log("error", e.message);
+         //  console.log("error", e.message);
           if (e.message && typeof e.message === "string") {
+            
             const eObj: Record<string, string> = JSON.parse(e.message);
 
             Object.entries(eObj).forEach(([k, v]) => {

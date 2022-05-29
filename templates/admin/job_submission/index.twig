@@ -1,0 +1,58 @@
+<div style="margin-top: 30px">
+
+<h2 style="font-size: 30px">Candidatures</h2>
+
+<table class="wp-list-table widefat fixed striped table-view-list pages">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Entity &amp; Job</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">CV</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% for item in data %}
+     
+     <tr>
+      <th>{{ item.created_date | date("d-m-Y H:i") }}</th>
+     <td>{{ item.entity }} &amp; {{ item.job }}</td>
+      <td>{{ item.first_name }}</td>
+      <td>{{ item.last_name }}</td>
+      <td>{{ item.phone }}</td>
+      <td>{{ item.email }}</td>
+     
+      <td><a href="{{ item.cv }}" download>Télécharger</a></td>
+    </tr>
+
+    {% endfor %}
+   
+  </tbody>
+</table>
+
+<div style="display: flex;justify-content: space-between;margin:0; margin-top: 15px">
+
+<span> {{ itemsNumber }} items found</span>
+
+<ul style="display: flex; margin-right: 10px">
+
+{% if pageNumber > 1 %}
+
+<li style="margin-right: 15px"><a class="button" href="{{ paginationUrl }}{{ pageNumber - 1 }}">PREV <span aria-hidden="true">‹</span></a><li>
+
+{% endif %}
+
+{% if pageNumber < totalPages %}
+
+<li><a class="button" href="{{ paginationUrl }}{{ pageNumber + 1 }}">NEXT <span aria-hidden="true">›</span></a><li>
+
+{% endif %}
+
+</ul>
+
+</div>
+</div>

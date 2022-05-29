@@ -17,9 +17,12 @@ use Timber\Timber;
 use Timber\Twig;
 use Timber\Twig_Function;
 use Twig\Extension\StringLoaderExtension;
-use Twig\TwigFilter;
 use Twig\Environment as TwigEnv;
 use Whoops\Handler\PrettyPageHandler;
+use App\Job\Admin\JobSubmissionList;
+
+require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+
 
 /**
  * If you are installing Timber as a Composer dependency in your theme, you'll need this block
@@ -84,6 +87,8 @@ class StarterSite extends Site
 		add_action('wp_enqueue_scripts', [Actions::class, "remove_wp_block_library_css"], 100);
 		add_filter('wp_mail_from_name', [$this, 'mail_from_name']);
 		add_filter('wp_mail_from', [$this, 'mail_from']);
+		add_action("after_switch_theme", [$this, "createJobSubmissionTable"]);
+		add_action('admin_menu', [$this, 'registerJobSubmissionAdminMenu']);
 		Actions::remove_default_links();
 		$this->registerOptionPage();
 		$this->debug();
@@ -211,9 +216,9 @@ class StarterSite extends Site
 	{
 
 		$twig->addExtension(new StringLoaderExtension());
-		$twig->addFunction(new Twig_Function("isMobile", function() {
+		$twig->addFunction(new Twig_Function("isMobile", function () {
 
-			 return MobileDetector::isMobile();
+			return MobileDetector::isMobile();
 		}));
 		return $twig;
 	}
@@ -254,6 +259,51 @@ class StarterSite extends Site
 	public function mail_from($email)
 	{
 		return $this->admin_email;
+	}
+
+	public function createJobSubmissionTable()
+	{
+
+		try {
+
+			global $wpdb;
+
+			$charset_collate = $wpdb->get_charset_collate();
+
+			$tableName = sprintf("%sjob_submission", $wpdb->prefix);
+
+			$sql = "CREATE TABLE `{$tableName}` (
+				id INT NOT NULL AUTO_INCREMENT,
+				created_at datetime NOT NULL,
+				first_name VARCHAR(255),
+				last_name VARCHAR(255),
+				phone VARCHAR(255),
+				email VARCHAR(255),
+				entity VARCHAR(255),
+				job VARCHAR(255),
+				cv VARCHAR(255),
+				PRIMARY KEY (id)
+			  ) $charset_collate;";
+
+
+			maybe_create_table($tableName, $sql);
+		} catch (\Exception $e) {
+
+			// dd($e);
+		}
+	}
+
+	public function registerJobSubmissionAdminMenu()
+	{
+		add_menu_page(
+			'Job Submission',
+			'Job Submission',
+			'read',
+			'job_submission',
+			new JobSubmissionList(),
+			'dashicons-admin-users',
+			30
+		);
 	}
 }
 
