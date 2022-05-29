@@ -64,7 +64,7 @@ document.addEventListener("turbo:load", () => {
         'button[type="submit"]'
       ) as HTMLButtonElement;
 
-      submitBtn.setAttribute("disabled", "");
+      submitBtn.removeAttribute("disabled");
 
       submitBtn
         .querySelector<HTMLSpanElement>(".spinner")!
@@ -105,14 +105,13 @@ document.addEventListener("turbo:load", () => {
               document.body.style.removeProperty("overflow");
             }, 4000);
           }
-        } catch (e: Error | any) {
+        } catch (e: any) {
           submitBtn.removeAttribute("disabled");
           submitBtn
             .querySelector<HTMLSpanElement>(".spinner")!
             .style.setProperty("display", "none");
-         //  console.log("error", e.message);
-          if (e.message && typeof e.message === "string") {
-            
+          //  console.log("error", e.message);
+          if (e instanceof Error) {
             const eObj: Record<string, string> = JSON.parse(e.message);
 
             Object.entries(eObj).forEach(([k, v]) => {
