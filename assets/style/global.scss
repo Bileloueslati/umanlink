@@ -67,7 +67,7 @@ p {
     @apply absolute flex items-center justify-center border-2 border-dashed rounded-full h-[100px] lg:h-[150px] w-[100px] lg:w-[150px] bg-white transition-transform hover:scale-110;
 
     img {
-      @apply max-h-[40px] max-w-[90px] lg:max-w-[110px] lg:w-auto object-cover;
+      @apply lg:max-h-[60px] max-h-[40px] max-w-[90px] lg:max-w-[110px] lg:w-auto object-cover;
     }
 
     &:nth-child(1) {

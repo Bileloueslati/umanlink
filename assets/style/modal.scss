@@ -1,6 +1,11 @@
 .modal {
   @apply fixed inset-0 z-[1000] bg-black bg-opacity-75 invisible;
 
+  &#contact_modal {
+
+      @apply bg-secondary;
+  }
+
   .modal-dialog {
     @apply relative max-w-screen-sm lg:max-w-screen-md transition-transform duration-300 translate-y-[-50px] my-[1.75rem] mx-2 lg:m-auto opacity-0 overflow-y-auto;
 
