@@ -1,21 +1,25 @@
 
 {% set group = post.meta('career') %}
 
-<section class="py-16 lg:my-20 my-8 relative">
-
-<img src="{{ group.image }}" class="max-h-[400px] relative right-[-40px] lg:absolute lg:right-0 lg:inset-y-0 pointer-events-none" alt="{{ group.title }}" />
+<section class="lg:py-16 py-10 relative">
 
 <div class="container mx-auto">
 
-<div class="grid grid-cols-2 lg:gap-x-16">
+<div class="lg:grid lg:grid-cols-12 flex flex-col-reverse gap-x-16 gap-y-10 mt-16 lg:mt-0 items-center">
 
-<div class="lg:col-span-1 col-span-2 mt-20 lg:mt-0">
+<div class="lg:col-span-7">
 
 <span class="small_title">{{ group.small_title }}</span>
 
-<h2 class="text-3xl mb-4">{{ group.title }} </h2>
+<h2 class="text-3xl mb-4 text-secondary">{{ group.title }} </h2>
 
 <p class="lg:text-lg">{{ group.description }} </p>
+
+</div>
+
+<div class="lg:col-span-5">
+
+<img src="{{ group.image }}" class="pointer-events-none max-h-[400px] relative lg:right-0 right-[-40px]" alt="{{ group.title }}" />
 
 </div>
 

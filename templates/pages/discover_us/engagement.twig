@@ -2,19 +2,21 @@
 
 <section class="my-16 relative">
 
-<img src="{{ group.image }}" class="max-h-[400px] hidden lg:block lg:absolute left-0 top-[50%] translate-y-[-50%]" alt="{{ group.title }}" />
-
 <div class="container mx-auto">
 
 <div class="grid lg:grid-cols-2 gap-x-20 items-center">
 
-<div></div>
+<div>
+
+<img src="{{ group.image }}" class="max-h-[400px] hidden lg:block" alt="{{ group.title }}" />
+
+</div>
 
 <div>
 
 <span class="small_title">{{ group.small_title }}</span>
 
-<h2 class="text-3xl mb-4">{{ group.title }}</h2>
+<h2 class="text-3xl mb-4 text-secondary">{{ group.title }}</h2>
 
 <p>{{ group.description }}</p>
 
@@ -42,7 +44,6 @@
 </div>
 
 </div>
-
 
 </div>
 

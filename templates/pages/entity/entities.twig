@@ -10,17 +10,17 @@
 
 <div class="bg-white shadow-lg rounded-lg py-10 px-6 transition-all duration-500 lg:hover:scale-110">
 
-<div class="h-[80px]">
-
 <a href="{{ entity.link }}">
 
-<img src="{{ entity.meta("logo") }}" class="max-h-[70px] object-cover" alt="{{ entity }}" />
+<div class="h-[60px]">
 
-</a>
+<img src="{{ entity.meta("logo") }}" class="max-h-[50px] object-contain" alt="{{ entity }}" />
 
 </div>
 
-<h3 class="text-lg mb-3">{{ item.title }}</h3>
+</a>
+
+<h3 class="text-lg mt-2 mb-4 text-secondary">{{ item.title }}</h3>
 
 <p class="mb-8">{{ item.description }}</p>
 
