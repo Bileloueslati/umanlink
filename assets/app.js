@@ -4,6 +4,8 @@ import * as Turbo from "@hotwired/turbo";
 
 require("./js/swiper");
 
+require("./js/img_lazy_load");
+
 require("./js/navbar");
 
 require("./js/accordion");
