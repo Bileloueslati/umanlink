@@ -6,7 +6,7 @@
 
 {% for image in gallery %}
 
-<img src="{{ image }}" class="w-full h-[250px] lg:h-[300px] object-cover pointer-events-none border-r-2 border-white {% if loop.last %}lg:col-span-2{% endif %}" alt="" />
+<img data-src="{{ image }}" class="lazy-image w-full h-[250px] lg:h-[300px] object-cover pointer-events-none border-r-2 border-white {% if loop.last %}lg:col-span-2{% endif %}" alt="" />
 
 {% endfor %}
 

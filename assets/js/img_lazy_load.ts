@@ -16,7 +16,7 @@ document.addEventListener("turbo:load", () => {
           if (src) {
             image.src = src;
 
-            image.onload = () => image.previousElementSibling?.remove();
+           // image.onload = () => image.previousElementSibling?.remove();
 
             imageObserver.unobserve(image);
           }
