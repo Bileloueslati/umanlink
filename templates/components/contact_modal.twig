@@ -3,19 +3,21 @@
 
 <div class="modal-dialog centered modal-xl">
 
+<img src="{{ footer.first_col.logo }}" alt="{{site.name}}" class="lg:max-w-md max-w-[150px] hidden xl:flex self-start mb-4"/>
+
 <div class="modal-content">
 
-<div class="modal-header">
+<div class="modal-header items-center">
 
 <div class="mr-8">
 
-<h3 class="font-gotham text-2xl lg:text-3xl mb-3">{{ header.contact_modal.title }}</h3>
+<h3 class="font-gotham text-2xl lg:text-3xl mb-0 lg:mb-3">{{ header.contact_modal.title }}</h3>
 
 <p class="mb-0 lg:block hidden text-secondary">{{ header.contact_modal.description }}</p>
 
 </div>
 
-<button class="close h-[30px] w-[30px] mr-6" aria-label="Close"></button>
+<button class="close h-[30px] w-[30px] mr-6 flex" aria-label="Close"></button>
 
 </div> <!-- /.modal-header -->
 
@@ -49,10 +51,9 @@
 
 <span class="text-primary text-xl">+33 06 09 44 34 02</span>
 
-
 </div>
 
-<img src="{{ header.contact_modal.map }}" class="hidden lg:block mx-auto mb-4 lg:w-[500px]" alt="" />
+<img src="{{ header.contact_modal.map }}" class="hidden lg:block mx-auto mb-4 lg:w-[400px]" alt="" />
 
 </div>
 
