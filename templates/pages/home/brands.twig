@@ -9,11 +9,11 @@
 
 <div class="col-span-8 lg:col-span-6">
 
-<span class="small_title">{{ brands.small_title}}</span>
+<span class="small_title" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500">{{ brands.small_title}}</span>
 
-<h2 class="text-3xl text-secondary font-bold my-2">{{ brands.title}}</h2>
+<h2 data-aos="fade-up" data-aos-duration="1500" class="text-3xl text-secondary font-bold my-2">{{ brands.title}}</h2>
 
-<p class="text-secondary font-normal">{{ brands.description }}</p>
+<p class="text-secondary font-normal" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">{{ brands.description }}</p>
 
 </div>
 
@@ -31,7 +31,7 @@
 
 </div>
 
-<div class="slider swiper mt-14" data-xs="1.1" data-md="2.5" data-lg="3.5">
+<div class="slider swiper mt-14" data-xs="1.1" data-md="2.5" data-lg="3.5" data-speed="1000">
 
 <div class="swiper-wrapper">
 
@@ -79,19 +79,25 @@
 
 </div> <!-- /container -->
 
-<div class="grid grid-cols-4 lg:grid-cols-8 mt-20 gap-6 px-2">
+<div class="slider swiper mt-20 w-full h-full mx-auto" data-speed="1000" data-xs="2.3" data-md="6" data-lg="8" data-autoplay='{{ { delay: 1, disableOnInteraction: true } | json_encode(constant('JSON_PRETTY_PRINT')) }}'>
+
+<div class="swiper-wrapper">
  
 {% for logo in brands.logos %}
 
-<div class="border p-2 flex items-center rounded-lg transition-transform hover:scale-110">
+<div class="item swiper-slide">
 
-<img data-src="{{ logo }}" class="lazy-image mx-auto" alt="" />
+<div class="border p-2 flex items-center rounded-lg overflow-hidden h-[100px]">
+
+<img src="{{ logo }}" class="mx-auto max-h-[60px] transition-transform hover:scale-110" alt="" />
 
 </div>
 
+</div>
 
 {% endfor %}
 
+</div>
 
 </div>
 

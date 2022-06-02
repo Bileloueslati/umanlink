@@ -1,12 +1,10 @@
-document.addEventListener("turbo:load", () => {
+export default function LazyImage() {
   const images = Array.from<HTMLImageElement>(
     document.querySelectorAll(".lazy-image")
   );
 
   if ("IntersectionObserver" in window) {
-    
     const imageObserver = new IntersectionObserver((entries, observer) => {
-         
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const image = entry.target as HTMLImageElement;
@@ -15,9 +13,6 @@ document.addEventListener("turbo:load", () => {
 
           if (src) {
             image.src = src;
-
-           // image.onload = () => image.previousElementSibling?.remove();
-
             imageObserver.unobserve(image);
           }
         }
@@ -26,6 +21,4 @@ document.addEventListener("turbo:load", () => {
 
     images.forEach((img) => imageObserver.observe(img));
   }
-});
-
-export {};
+}

@@ -1,0 +1,14 @@
+@import "~lightgallery/css/lightgallery.css";
+@import "~lightgallery/css/lg-zoom.css";
+@import "~lightgallery/css/lg-thumbnail.css";
+
+.lg-backdrop,
+.lg-outer .lg-thumb-outer {
+  @apply bg-primary;
+}
+
+.lg-next,
+.lg-prev,
+.lg-toolbar .lg-icon {
+  @apply text-white;
+}

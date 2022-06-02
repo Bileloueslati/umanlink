@@ -8,9 +8,9 @@
 
 		<div class="grid lg:grid-cols-2 gap-x-20 gap-y-8">
 
-			{% for item in become_umanien.blocks %}
+			{% for key, item in become_umanien.blocks %}
 
-				<div class="item rounded-xl flex flex-col justify-end bg-cover bg-center h-[300px] w-full relative" style="background-image: url({{ item.image }})">
+				<div class="item rounded-xl flex flex-col justify-end bg-cover bg-center h-[300px] w-full relative" style="background-image: url({{ item.image }})" data-aos="fade-{{ key == 0 ? "right": "left"}}" data-aos-duration="2000">
 
 					<div class="overlay rounded-xl"></div>
 

@@ -1,16 +1,15 @@
-import Swiper, { Navigation } from "swiper";
+import Swiper, { Navigation, SwiperOptions, Grid, Autoplay } from "swiper";
 
 document.addEventListener("turbo:load", () => {
   document.querySelectorAll<HTMLInputElement>(".swiper").forEach((el) => {
+    const { xs, lg, md, rows, autoplay, speed } = el.dataset;
 
-    const { xs, lg, md } = el.dataset;
-
-    const swiper = new Swiper(el, {
+    let options: SwiperOptions = {
       loop: true,
-      autoplay: true,
       slidesPerView: Number(lg) || 3,
-      spaceBetween: 30,
-      modules: [Navigation],
+      spaceBetween: Number(speed) || 3000,
+      modules: [Navigation, Grid, Autoplay],
+      speed: 2000,
       navigation: {
         nextEl: ".swiper-next-button",
         prevEl: ".swiper-prev-button",
@@ -34,6 +33,18 @@ document.addEventListener("turbo:load", () => {
           spaceBetween: 20,
         },
       },
-    });
+    };
+
+    if (rows && options.breakpoints) {
+      options.breakpoints[1024].grid = {
+        rows: Number(rows),
+      };
+    }
+
+    if (autoplay) {
+      options.autoplay = JSON.parse(autoplay);
+    }
+
+    const swiper = new Swiper(el, options);
   });
 });

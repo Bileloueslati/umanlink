@@ -3,12 +3,12 @@
     "app": {
       "js": [
         "/wp-content/themes/umanlink/public/build/runtime.fb3519d0.js",
-        "/wp-content/themes/umanlink/public/build/96.43b73940.js",
-        "/wp-content/themes/umanlink/public/build/app.a97470a7.js"
+        "/wp-content/themes/umanlink/public/build/650.97e1e566.js",
+        "/wp-content/themes/umanlink/public/build/app.b135b351.js"
       ],
       "css": [
-        "/wp-content/themes/umanlink/public/build/96.1dc0ed44.css",
-        "/wp-content/themes/umanlink/public/build/app.e1cbda21.css"
+        "/wp-content/themes/umanlink/public/build/650.9d7607fd.css",
+        "/wp-content/themes/umanlink/public/build/app.01175614.css"
       ]
     }
   }

@@ -1,9 +1,9 @@
 {
-  "wp-content/themes/umanlink/public/build/app.css": "/wp-content/themes/umanlink/public/build/app.e1cbda21.css",
-  "wp-content/themes/umanlink/public/build/app.js": "/wp-content/themes/umanlink/public/build/app.a97470a7.js",
+  "wp-content/themes/umanlink/public/build/app.css": "/wp-content/themes/umanlink/public/build/app.01175614.css",
+  "wp-content/themes/umanlink/public/build/app.js": "/wp-content/themes/umanlink/public/build/app.b135b351.js",
   "wp-content/themes/umanlink/public/build/runtime.js": "/wp-content/themes/umanlink/public/build/runtime.fb3519d0.js",
-  "wp-content/themes/umanlink/public/build/96.1dc0ed44.css": "/wp-content/themes/umanlink/public/build/96.1dc0ed44.css",
-  "wp-content/themes/umanlink/public/build/96.43b73940.js": "/wp-content/themes/umanlink/public/build/96.43b73940.js",
+  "wp-content/themes/umanlink/public/build/650.9d7607fd.css": "/wp-content/themes/umanlink/public/build/650.9d7607fd.css",
+  "wp-content/themes/umanlink/public/build/650.97e1e566.js": "/wp-content/themes/umanlink/public/build/650.97e1e566.js",
   "wp-content/themes/umanlink/public/build/images/fontawesome-webfont.svg?v=4.7.0": "/wp-content/themes/umanlink/public/build/images/fontawesome-webfont.c1e38fd9.svg",
   "wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.eot?v=4.7.0": "/wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.8b43027f.eot",
   "wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.ttf?v=4.7.0": "/wp-content/themes/umanlink/public/build/fonts/fontawesome-webfont.1e59d233.ttf",
@@ -18,5 +18,10 @@
   "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Bold.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Bold.32eb35b8.otf",
   "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Light.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Light.6072c282.otf",
   "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Book.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Book.16b60add.otf",
-  "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Medium.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Medium.eae453c7.otf"
+  "wp-content/themes/umanlink/public/build/fonts/FuturaStd-Medium.otf": "/wp-content/themes/umanlink/public/build/fonts/FuturaStd-Medium.eae453c7.otf",
+  "wp-content/themes/umanlink/public/build/images/lg.svg?io9a6k": "/wp-content/themes/umanlink/public/build/images/lg.09cd8e9b.svg",
+  "wp-content/themes/umanlink/public/build/fonts/lg.woff?io9a6k": "/wp-content/themes/umanlink/public/build/fonts/lg.356a0e9c.woff",
+  "wp-content/themes/umanlink/public/build/fonts/lg.ttf?io9a6k": "/wp-content/themes/umanlink/public/build/fonts/lg.747d0385.ttf",
+  "wp-content/themes/umanlink/public/build/images/loading.gif": "/wp-content/themes/umanlink/public/build/images/loading.fcba57cd.gif",
+  "wp-content/themes/umanlink/public/build/fonts/lg.woff2?io9a6k": "/wp-content/themes/umanlink/public/build/fonts/lg.64b800aa.woff2"
 }
