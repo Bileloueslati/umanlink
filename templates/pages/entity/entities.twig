@@ -4,9 +4,11 @@
 
 <div class="grid lg:grid-cols-3 gap-x-20 gap-y-10">
 
-{% for item in post.meta("list") %}
+{% for key, item in post.meta("list") %}
 
 {% set entity = Post(item.entity) %}
+
+<div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="{{key + 3}}00">
 
 <div class="bg-white shadow-lg rounded-lg py-10 px-6 transition-all duration-500 lg:hover:scale-110">
 
@@ -29,7 +31,7 @@
 En savoir plus
 
 </a>
-
+</div>
 </div>
 {% endfor %}
 

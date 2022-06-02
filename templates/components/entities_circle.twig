@@ -8,9 +8,9 @@
 
 <div class="z-30 h-[320px] lg:h-[450px] lg:w-[450px] w-[320px] rounded-full border-2 border-dashed relative mx-auto block circle">
 
-{% for entity in entities %}
+{% for key, entity in entities %}
 
-<div class="item z-40">
+<div class="item z-40" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="{{key + 3}}00">
 
 <a href="{{ entity.link }}">
 
