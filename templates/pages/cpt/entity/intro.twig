@@ -9,17 +9,21 @@
 
 <div class="lg:col-span-5">
 
-<img data-src="{{ group.image }}" class="lazy-image pointer-events-none max-h-[400px] relative lg:left-0 left-[-40px]" alt="{{ group.title }}" />
+<img data-aos="flip-left" data-aos-duration="2500" data-aos-delay="100" data-src="{{ group.image }}" class="lazy-image pointer-events-none max-h-[400px] relative lg:left-0 left-[-40px]" alt="{{ group.title }}" />
 
 </div>
 
 <div class="lg:col-span-7">
+
+<div data-aos="fade-up" data-aos-duration="2500" data-aos-delay="500">
 
 <span class="small_title">{{ group.small_title }}</span>
 
 <h2 class="text-3xl mb-4 text-secondary">{{ group.title }} </h2>
 
 <p class="lg:text-lg">{{ group.description }} </p>
+
+</div>
 
 </div>
 
