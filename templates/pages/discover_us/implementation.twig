@@ -1,7 +1,7 @@
 
 {% set group = post.meta('implementation') %}
 
-<section id="implementation" class="bg-[#001846] pt-16 pb-6">
+<section id="implementation" class="bg-[#001846] pt-16 pb-12">
 
 <div class="container mx-auto">
 
@@ -25,8 +25,7 @@
 
 </div>
 
-</section>
-
-<section class="hidden lg:block mb-10 h-[400px] w-full bg-cover bg-center bg-no-repeat bg-[#001846]" style="background-image: url({{group.background_image}})">
+<img src="{{group.background_image}}}" class="hidden lg:block w-full object-cover" alt="" />
+ 
 </section>
 
