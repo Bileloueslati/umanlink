@@ -40,7 +40,7 @@
 
 {% set entity = Post(job.entity) %}
 
-<div class="job bg-white shadow rounded-lg flex lg:flex-row flex-col lg:items-center lg:justify-between py-4 px-3 lg:px-6 mb-5 transition-all duration-400 delay-200" data-entity="{{ function("str_replace", " ", "", entity) | lower }}">
+<div class="job bg-white shadow rounded-lg flex lg:flex-row flex-col lg:items-center lg:justify-between py-4 px-3 lg:px-6 mb-5" data-entity="{{ function("str_replace", " ", "", entity) | lower }}" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
 
 <div class="flex flex-row items-center">
 

@@ -9,18 +9,18 @@
 
 	{% include "partial/header.twig" with {'items': menu.get_items} %}
 
-	<section id="content" role="main" class="content-wrapper">
-		<div class="wrapper {{sidebar_class}}">
+	<main id="content" role="main" class="content-wrapper">
+		
 			{% block content %}
 				Sorry, no content
 			{% endblock %}
-		</div>
+		
 		{% if sidebar %}
 			<aside class="layout-sidebar">
 				{{sidebar}}
 			</aside>
 		{% endif %}
-	</section>
+	</main>
 
 	{% block footer %}
 	{% include 'partial/footer.twig' %}
